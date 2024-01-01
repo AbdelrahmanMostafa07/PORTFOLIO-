@@ -11,124 +11,128 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            box-sizing: border-box;
-        }
+    html {
+        scroll-behavior: smooth;
+    }
 
-        .main-content {
-            padding: 20px;
-            width: 100%;
-            box-sizing: border-box;
-        }
+    body {
+        font-family: 'Open Sans', sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        box-sizing: border-box;
+    }
 
-        .skills-container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            height: 96vh;
-        }
+    .main-content {
+        padding: 20px;
+        box-sizing: border-box;
+    }
 
-        .skills-row {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
+    .skills-container,
+    .about-container,
+    .contact-container {
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        padding: 20px;
+    }
 
-        .skills-column {
-            width: 100%;
-            max-width: 500px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
+    .skills-row,
+    .w3-row-padding {
+        margin-bottom: 20px;
+    }
 
-        h1 {
-            color: #333;
-            margin: 0;
-            margin-bottom: 20px;
-        }
+    .skills-column,
+    .about-content,
+    .contact-content {
+        margin-bottom: 20px;
+    }
 
+    h1 {
+        color: #333;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    p {
+        color: #555;
+    }
+
+    canvas {
+        margin-top: 20px;
+        width: 100%;
+        height: 200px;
+    }
+
+    /* قواعد للكمبيوتر أو شاشات العرض الكبيرة */
+    @media screen and (min-width: 768px) {
         canvas {
             margin-top: 20px;
-            width: 100%;
-            height: 200px;
+            width: 80%;
+            height: 300px;
         }
+    }
 
-        /* قواعد للكمبيوتر أو شاشات العرض الكبيرة */
-        @media screen and (min-width: 768px) {
-            canvas {
-                margin-top: 20px;
-                width: 80%;
-                height: 300px;
-            }
-        }
-
-        /* قواعد للموبايل أو شاشات العرض الصغيرة */
-        @media screen and (max-width: 767px) {
-            canvas {
-                margin-top: 20px;
-                width: auto;
-                max-width: 100%;
-                height: auto;
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-            }
-        }
-
-        .back-button {
-            margin-top: auto;
-            padding: 10px 20px;
-            background-color: #2196f3;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
+    /* قواعد للموبايل أو شاشات العرض الصغيرة */
+    @media screen and (max-width: 767px) {
+        canvas {
+            margin-top: 20px;
+            width: auto;
+            max-width: 100%;
+            height: auto;
             display: block;
             margin-left: auto;
             margin-right: auto;
-            max-width: 200px;
-            align-self: center;
-
-        .w3-section.w3-bottombar.w3-padding-16 {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
+    }
 
-        .w3-section.w3-bottombar.w3-padding-16 a {
-            width: 100%;
-            text-align: center;
-        }
+    .back-button {
+        margin-top: auto;
+        padding: 10px 20px;
+        background-color: #0d47a1;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 200px;
+        align-self: center;
+        transition: background-color 0.3s;
+    }
 
-        .about-container {
-        background-color: #fff; /* لون خلفية قسم ABOUT */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        /* يمكنك إضافة المزيد من الخصائص الخاصة بالتصميم حسب رغبتك */
-        }
+    .back-button:hover {
+        background-color: #004080;
+    }
 
-        .contact-container {
-        background-color: #e0e0e0; /* لون خلفية قسم CONTACT ME */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        /* يمكنك إضافة المزيد من الخصائص الخاصة بالتصميم حسب رغبتك */
-        }
-    
-        .contact-content {
+    .w3-section.w3-bottombar.w3-padding-16 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .w3-section.w3-bottombar.w3-padding-16 a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-container {
+        background-color: #f5f5f5; /* تعديل لون خلفية قسم ABOUT */
+    }
+
+    .contact-container {
+        background-color: #ececec; /* تعديل لون خلفية قسم CONTACT ME */
+    }
+
+    .contact-content {
         padding: 20px; /* تحديد هامش الداخلي للمحتوى */
         text-align: center; /* تحديد محاذاة النص إلى اليسار */
-        }
-
-    </style>
+    }
+</style>
+    
 </head>
 
 <body>
