@@ -349,7 +349,9 @@
                         anchor: 'center',
                         align: 'center',
                         color: '#000', // تحديد لون النص
-                        fontStyle: 'normal', // جعل النص بشكل عادي
+                        font: {
+                            style: 'normal' // جعل النص بشكل عادي
+                        },
                     },
                 },
                 scales: {
@@ -367,7 +369,6 @@
             }
         });
                 
-
         // تابع للكشف عن التمرير إلى قسم الأسكيلز
         window.addEventListener('scroll', function() {
             var skillsSection = document.getElementById('skills-section');
