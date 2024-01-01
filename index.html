@@ -215,11 +215,11 @@
             <div class="w3-row-padding">
                 <div class="w3-col m6">
                     <h2 style="text-align: center;">Technical Skills</h2>
-                    <canvas id="technicalSkillsChart" width="300" height="300"></canvas>
+                    <canvas id="technicalSkillsChart" width="300" height="150"></canvas>
                 </div>
                 <div class="w3-col m6">
                     <h2 style="text-align: center;">Interpersonal Skills</h2>
-                    <canvas id="interpersonalSkillsChart" width="300" height="300"></canvas>
+                    <canvas id="interpersonalSkillsChart" width="300" height="150"></canvas>
                 </div>
             </div>
         </div>
@@ -250,6 +250,7 @@
                 },
             },
             responsive: true,
+            maintainAspectRatio: false, // Added to improve smoothness
         }
     });
 
@@ -287,6 +288,8 @@
                     },
                 },
             },
+            responsive: true,
+            maintainAspectRatio: false, // Added to improve smoothness
         }
     });
 </script>
