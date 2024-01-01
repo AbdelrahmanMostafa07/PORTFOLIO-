@@ -224,36 +224,62 @@
             </div>
         </div>
 
+        <!-- About Section -->
+        <div id="about" class="w3-container w3-light-grey w3-padding-32">
+            <div class="about-container">
+                <h2>About Me</h2>
+                <p>Welcome to my portfolio! I am passionate about data science, analytics, and problem-solving. With a strong background in...</p>
+                <!-- Add more details about yourself as needed -->
+            </div>
+        </div>
+
 
         <!-- End page content -->
     </div>
 
 <script>
-    // Replace the following mock data with your actual technical skills data
+    // Function to create a Chart
+    function createChart(canvasId, chartType, data, options) {
+        const ctx = document.getElementById(canvasId).getContext('2d');
+        return new Chart(ctx, {
+            type: chartType,
+            data: data,
+            options: options,
+        });
+    }
+
+    // Function to scroll to a section
+    function scrollToSection(sectionId) {
+        var element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+
+    // Technical Skills Data
     const technicalSkillsData = {
         labels: ['Microsoft Excel', 'Microsoft Power BI', 'Python', 'SQL', 'Data Visualization'],
         datasets: [{
-            data: [80, 70, 85, 90, 75], // Replace these values with your proficiency levels
+            data: [80, 70, 85, 90, 75],
             backgroundColor: ['#4caf50', '#2196f3', '#ff5722', '#607d8b', '#e91e63'],
         }]
     };
 
-    const ctxTechnicalSkills = document.getElementById('technicalSkillsChart').getContext('2d');
-    const myTechnicalSkillsChart = new Chart(ctxTechnicalSkills, {
-        type: 'doughnut',
-        data: technicalSkillsData,
-        options: {
-            plugins: {
-                legend: {
-                    display: true,
-                    position: 'bottom',
-                },
+    // Technical Skills Chart Options
+    const technicalSkillsOptions = {
+        plugins: {
+            legend: {
+                display: true,
+                position: 'bottom',
             },
-            responsive: true,
-        }
-    });
+        },
+        responsive: true,
+    };
 
-    // Replace the following mock data with your actual interpersonal skills data
+    // Create Technical Skills Chart
+    createChart('technicalSkillsChart', 'doughnut', technicalSkillsData, technicalSkillsOptions);
+
+    // Interpersonal Skills Data
     const interpersonalSkillsData = {
         labels: ['Critical Thinking', 'Detail Oriented', 'Problem Solving', 'Collaboration', 'Communication Skills'],
         datasets: [{
@@ -261,34 +287,33 @@
             backgroundColor: '#2196f3',
             borderColor: '#2196f3',
             borderWidth: 1,
-            data: [95, 90, 85, 80, 75], // Replace these values with your proficiency levels
+            data: [95, 90, 85, 80, 75],
         }]
     };
 
-    const ctxInterpersonalSkills = document.getElementById('interpersonalSkillsChart').getContext('2d');
-    const myInterpersonalSkillsChart = new Chart(ctxInterpersonalSkills, {
-        type: 'bar',
-        data: interpersonalSkillsData,
-        options: {
-            plugins: {
-                legend: {
+    // Interpersonal Skills Chart Options
+    const interpersonalSkillsOptions = {
+        plugins: {
+            legend: {
+                display: false,
+            },
+        },
+        scales: {
+            y: {
+                beginAtZero: false,
+                min: 10,
+                max: 100,
+            },
+            x: {
+                grid: {
                     display: false,
                 },
             },
-            scales: {
-                y: {
-                    beginAtZero: false,
-                    min: 10,
-                    max: 100,
-                },
-                x: {
-                    grid: {
-                        display: false,
-                    },
-                },
-            },
-        }
-    });
+        },
+    };
+
+    // Create Interpersonal Skills Chart
+    createChart('interpersonalSkillsChart', 'bar', interpersonalSkillsData, interpersonalSkillsOptions);
 </script>
 
 </body>
