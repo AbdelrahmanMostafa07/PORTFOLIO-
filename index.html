@@ -28,6 +28,22 @@
             box-sizing: border-box;
         }
 
+        /* قواعد للكمبيوتر أو شاشات العرض الكبيرة */
+        @media screen and (min-width: 768px) {
+            .skills-container {
+                width: 60%; /* يمكنك تعديل هذه القيمة حسب احتياجاتك */
+                max-width: 800px; /* تحديد العرض الأقصى للمربع */
+                margin-left: auto;
+                margin-right: auto;
+            }
+        
+            .skills-row {
+                max-width: 1200px; /* تحديد العرض الأقصى لصف المهارات */
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
         .skills-container {
             background-color: #fff;
             padding: 20px;
