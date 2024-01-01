@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdelrahman's Portfolio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+            .w3-button.w3-white {
+                width: 100%;
+                margin-bottom: 10px;
+                font-size: 12px;
+                padding: 8px;
+                border-bottom: none; /* استخدم فاصلة منقوطة هنا */
+            }
+
+            .w3-third .w3-container {
+                text-align: center;
+            }
+            
+            .w3-third img {
+                width: 100%;
+                height: auto;
+                max-width: 100%; /* تجنب تجاوز حجم الصورة عندما يكون أصغر من العرض المحدد */
+            }
+
+            .w3-bar {
+                flex-direction: column;
+                overflow-x: auto;
+            }
+
+            .skills-container {
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                height: 96vh;
+            }
+
+            .skills-column {
+                width: 100%; /* لتمتد العمود ليشغل المساحة بشكل كامل */
+                max-width: 500px;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            
+            canvas {
+                margin-top: 20px;
+                width: 100%; /* لتأخذ الرسمة البيانية عرضًا كاملًا من العنصر الذي يحتوي عليه */
+                height: 200px; /* قم بتعديل هذا حسب احتياجاتك */
+            }
+            /* قواعد للكمبيوتر أو شاشات العرض الكبيرة */
+            @media screen and (min-width: 768px) {
+                .skills-column {
+                    margin-bottom: 70px; /* زيادة التباعد للكمبيوتر */
+                }
+            
+                canvas {
+                    margin-top: 20px;
+                    width: 70%; /* يمكنك تعديل نسبة العرض حسب احتياجاتك */
+                    height: 80px; /* قم بتعديل هذا حسب احتياجاتك */
+                }
+            }
+            
+            /* قواعد للموبايل أو شاشات العرض الصغيرة */
+            @media screen and (max-width: 767px) {
+                canvas {
+                    margin-top: 20px;
+                    width: auto;
+                    max-width: 100%;
+                    height: auto;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+
+        }
+    </style>
+</head>
+
+<body class="w3-light-grey w3-content" style="max-width:1600px; display: flex; justify-content: center; flex-direction: column;">
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main">
+
+        <!-- Header -->
+        <header id="portfolio" style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background: url('رابط الصورة') center/cover no-repeat; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <div style="display: flex; align-items: center;">
+                <a href="#" style="text-decoration: none;">
+                    <img src="cover.png" alt="Logo" style="width: 65px; height: 65px; border-radius: 50%; margin-right: 20px;" class="w3-circle w3-hide-large w3-hover-opacity">
+                </a>
+                <div class="w3-container">
+                    <h1 style="margin: 0; color: #fff;"><b>Abdelrahman's Portfolio</b></h1>
+                </div>
+            </div>
+            <div class="w3-section header-buttons">
+                <a href="https://abdelrahmanmostafa07.github.io/Portfolio/" onclick="w3_close()" class="w3-button w3-white">Home</a>
+                <a href="#skills" onclick="w3_close()" class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>SKILLS</a>
+                <a href="About.html" onclick="w3_close()" class="w3-button w3-white">ABOUT</a>
+                <a href="ContactMe.html" onclick="w3_close()" class="w3-button w3-white">CONTACT</a>
+            </div>
+        </header>
+
+        <!-- Projects Section -->
+        <div id="projects" class="w3-container w3-light-grey w3-padding-32">
+        
+            <!-- First Project -->
+            <div class="w3-row-padding">
+                <div class="w3-third w3-container w3-margin-bottom">
+                    <a href="first-project.html" target="_blank">
+                        <img src="SuperStore Dashboard_page-0001.jpg" alt="Project 1" style="width:100%; height:100%;" class="w3-hover-opacity">
+                    </a>
+                    <div class="w3-container w3-white">
+                        <a href="first-project.html" target="_blank">
+                            <p><b>Superstore Sales Analysis</b></p>
+                        </a>
+                        <p>Leveraged advanced analytics and visualization to optimize sales strategies, driving measurable business performance improvements through data-driven initiatives.</p>
+                    </div>
+                </div>
+        
+                <!-- Second Project -->
+                <div class="w3-third w3-container w3-margin-bottom">
+                    <a href="project2.html" target="_blank">
+                        <img src="customer.png" alt="Project 2" style="width:100%; height:100%;" class="w3-hover-opacity">
+                    </a>
+                    <div class="w3-container w3-white">
+                        <a href="project2.html" target="_blank">
+                            <p><b>Consumer Behavior and Shopping Habits Analysis</b></p>
+                        </a>
+                        <p>Conducted a comprehensive analysis of consumer behavior and shopping habits.</p>
+                    </div>
+                </div>
+        
+                <!-- Third Project -->
+                <div class="w3-third w3-container w3-margin-bottom">
+                    <a href="project3.html" target="_blank">
+                        <img src="data science.png" alt="Project 3" style="width:100%; height:100%;" class="w3-hover-opacity">
+                    </a>
+                    <div class="w3-container w3-white">
+                        <a href="project3.html" target="_blank">
+                            <p><b>Modern Data Science Job Trends</b></p>
+                        </a>
+                        <p>Analyzed data science factors to reveal dynamic salary trends.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Second Row of Projects -->
+            <div class="w3-row-padding">
+                <!-- Fourth Project -->
+                <div class="w3-third w3-container w3-margin-bottom">
+                    <a href="project4.html" target="_blank">
+                        <img src="attrition.png" alt="Project 4" style="width:100%; height:100%;" class="w3-hover-opacity">
+                    </a>
+                    <div class="w3-container w3-white">
+                        <a href="project4.html" target="_blank">
+                            <p><b>Attrition of Employees Case Study</b></p>
+                        </a>
+                        <p>This project delved into employee data to examine and comprehend the factors behind their attrition from the workplace.</p>
+                    </div>
+                </div>
+        
+                <!-- Fifth Project -->
+                <div class="w3-third w3-container w3-margin-bottom">
+                    <a href="project5.html" target="_blank">
+                        <img src="Serial.png" alt="Project 5" style="width:100%; height:100%;" class="w3-hover-opacity">
+                    </a>
+                    <div class="w3-container w3-white">
+                        <a href="project5.html" target="_blank">
+                            <p><b>Case Study about serial killers</b></p>
+                        </a>
+                        <p>Performed Python-based case study on serial killers, analyzing geographic distribution, temporal trends, and victim characteristics to unveil patterns.</p>
+                    </div>
+                </div>
+        
+                <!-- Sixth Project -->
+                <div class="w3-third w3-container w3-margin-bottom">
+                    <a href="project6.html" target="_blank">
+                        <img src="hotels dashboard.png" alt="Project 6" style="width:100%; height:100%;" class="w3-hover-opacity">
+                    </a>
+                    <div class="w3-container w3-white">
+                        <a href="project6.html" target="_blank">
+                            <p><b>Hotels Analysis Project</b></p>
+                        </a>
+                        <p>Excel-driven analysis of hotel performance, encompassing booking trends, occupancy rates, and guest satisfaction metrics. Implemented advanced Excel functions and pivot tables to derive actionable insights.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div id="skills" class="w3-container w3-light-grey w3-padding-32">
+            <div class="w3-row-padding">
+                <div class="w3-col m6">
+                    <h2 style="text-align: center;">Technical Skills</h2>
+                    <canvas id="technicalSkillsChart" width="300" height="300"></canvas>
+                </div>
+                <div class="w3-col m6">
+                    <h2 style="text-align: center;">Interpersonal Skills</h2>
+                    <canvas id="interpersonalSkillsChart" width="300" height="300"></canvas>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- End page content -->
+    </div>
+
+<script>
+    // Replace the following mock data with your actual technical skills data
+    const technicalSkillsData = {
+        labels: ['Microsoft Excel', 'Microsoft Power BI', 'Python', 'SQL', 'Data Visualization'],
+        datasets: [{
+            data: [80, 70, 85, 90, 75], // Replace these values with your proficiency levels
+            backgroundColor: ['#4caf50', '#2196f3', '#ff5722', '#607d8b', '#e91e63'],
+        }]
+    };
+
+    const ctxTechnicalSkills = document.getElementById('technicalSkillsChart').getContext('2d');
+    const myTechnicalSkillsChart = new Chart(ctxTechnicalSkills, {
+        type: 'doughnut',
+        data: technicalSkillsData,
+        options: {
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'bottom',
+                },
+            },
+            responsive: true,
+        }
+    });
+
+    // Replace the following mock data with your actual interpersonal skills data
+    const interpersonalSkillsData = {
+        labels: ['Critical Thinking', 'Detail Oriented', 'Problem Solving', 'Collaboration', 'Communication Skills'],
+        datasets: [{
+            label: 'Skill Proficiency',
+            backgroundColor: '#2196f3',
+            borderColor: '#2196f3',
+            borderWidth: 1,
+            data: [95, 90, 85, 80, 75], // Replace these values with your proficiency levels
+        }]
+    };
+
+    const ctxInterpersonalSkills = document.getElementById('interpersonalSkillsChart').getContext('2d');
+    const myInterpersonalSkillsChart = new Chart(ctxInterpersonalSkills, {
+        type: 'bar',
+        data: interpersonalSkillsData,
+        options: {
+            plugins: {
+                legend: {
+                    display: false,
+                },
+            },
+            scales: {
+                y: {
+                    beginAtZero: false,
+                    min: 10,
+                    max: 100,
+                },
+                x: {
+                    grid: {
+                        display: false,
+                    },
+                },
+            },
+        }
+    });
+</script>
+
+</body>
+
+</html>
