@@ -1,69 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Skills</title>
-    <!-- Include Chart.js -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Abdelrahman's Skills</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        /* Add your custom styles here */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .main-content {
+            padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .skills-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            height: 96vh;
+        }
+
+        .skills-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .skills-column {
+            width: 100%; /* تمديد العمود ليشغل المساحة بشكل كامل */
+            max-width: 500px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+
         canvas {
+            margin-top: 20px;
+            width: 100%;
+            height: 200px;
+        }
+
+        /* قواعد للكمبيوتر أو شاشات العرض الكبيرة */
+        @media screen and (min-width: 768px) {
+            canvas {
+                margin-top: 20px;
+                width: 80%;
+                height: 80%;
+            }
+        }
+
+        /* قواعد للموبايل أو شاشات العرض الصغيرة */
+        @media screen and (max-width: 767px) {
+            canvas {
+                margin-top: 20px;
+                width: auto;
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        .back-button {
+            margin-top: auto;
+            padding: 10px 20px;
+            background-color: #2196f3;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
             display: block;
-            margin: 20px auto;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 200px;
+            align-self: center;
         }
     </style>
 </head>
-<body>
-    <h2>Technical Skills</h2>
-    <canvas id="technicalSkillsChart" width="400" height="400"></canvas>
 
-    <h2>Interpersonal Skills</h2>
-    <canvas id="interpersonalSkillsChart" width="400" height="400"></canvas>
+<body>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <div class="skills-container">
+            <div class="skills-row">
+                <div class="skills-column">
+                    <h1>Technical Skills</h1>
+                    <canvas id="technicalSkillsChart" width="300" height="300"></canvas>
+                </div>
+
+                <div class="skills-column">
+                    <h1>Interpersonal Skills</h1>
+                    <canvas id="interpersonalSkillsChart" width="300" height="300"></canvas>
+                </div>
+            </div>
+
+            <a href="https://abdelrahmanmostafa07.github.io/Portfolio/" class="back-button" onclick="history.go(-1);">Back to Home</a>
+        </div>
+
+    </div>
 
     <script>
-        // Technical Skills Chart
-        var technicalSkillsData = {
-            labels: ["HTML", "CSS", "JavaScript", "Python", "Java"],
+        // Mock data, replace with your actual skill levels
+        const technicalSkillsData = {
+            labels: ['Microsoft Excel', 'Microsoft Power BI', 'Python', 'SQL', 'Data Visualization'],
             datasets: [{
-                data: [90, 80, 85, 75, 70],
-                backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4CAF50", "#E91E63"]
+                data: [90, 90, 85, 90, 95],
+                backgroundColor: ['#4caf50', '#2196f3', '#ff5722', '#607d8b', '#e91e63'],
             }]
         };
 
-        var technicalSkillsOptions = {
-            responsive: true,
-            maintainAspectRatio: false
+        const interpersonalSkillsData = {
+            labels: ['Critical Thinking', 'Communication Skills', 'Detail Oriented', 'Problem-Solving', 'Collaboration'],
+            datasets: [{
+                label: 'Skill Proficiency',
+                backgroundColor: '#2196f3',
+                borderColor: '#2196f3',
+                borderWidth: 1,
+                data: [95, 90, 85, 80, 75],
+            }]
         };
 
-        var technicalSkillsChartCanvas = document.getElementById("technicalSkillsChart").getContext("2d");
-        var technicalSkillsChart = new Chart(technicalSkillsChartCanvas, {
+        const ctxTechnicalSkills = document.getElementById('technicalSkillsChart').getContext('2d');
+        const myTechnicalSkillsChart = new Chart(ctxTechnicalSkills, {
             type: 'doughnut',
             data: technicalSkillsData,
-            options: technicalSkillsOptions
+            options: {
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'bottom',
+                    },
+                },
+                responsive: true,
+            }
         });
 
-        // Interpersonal Skills Chart
-        var interpersonalSkillsData = {
-            labels: ["Communication", "Teamwork", "Problem Solving", "Adaptability", "Leadership"],
-            datasets: [{
-                data: [85, 90, 80, 75, 70],
-                backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4CAF50", "#E91E63"]
-            }]
-        };
-
-        var interpersonalSkillsOptions = {
-            responsive: true,
-            maintainAspectRatio: false
-        };
-
-        var interpersonalSkillsChartCanvas = document.getElementById("interpersonalSkillsChart").getContext("2d");
-        var interpersonalSkillsChart = new Chart(interpersonalSkillsChartCanvas, {
+        const ctxInterpersonalSkills = document.getElementById('interpersonalSkillsChart').getContext('2d');
+        const myInterpersonalSkillsChart = new Chart(ctxInterpersonalSkills, {
             type: 'bar',
             data: interpersonalSkillsData,
-            options: interpersonalSkillsOptions
+            options: {
+                plugins: {
+                    legend: {
+                        display: false,
+                    },
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        min: 10,
+                        max: 100,
+                    },
+                    x: {
+                        grid: {
+                            display: false,
+                        },
+                    },
+                },
+            }
         });
     </script>
+
 </body>
+
 </html>
