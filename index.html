@@ -3,18 +3,50 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Skills</title>
-    <!-- Include Chart.js -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Abdelrahman's Skills</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdelrahman's Portfolio</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        /* Add your custom styles here */
+    body, h1, h2, h3, h4, h5, h6 {
+        font-family: 'Open Sans', sans-serif;
+    }
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        @media screen and (max-width: 767px) {
+            .w3-button.w3-third {
+                width: 100%;
+                margin-bottom: 10px;
+                padding: 8px;
+            }
+
+            .w3-button.w3-white {
+                width: 100%;
+                margin-bottom: 10px;
+                font-size: 12px;
+                padding: 8px;
+            }
+
+    @media screen and (max-width: 767px) {
+        .w3-button.w3-third {
+            width: 100%; /* الغاء تحديد عرض الزر ليأخذ حجمه الطبيعي */
+            margin-bottom: 10px; /* تباعد بين الأزرار */
+            padding: 8px; /* تحديد هوامش داخلية للأزرار */
+            .w3-bar {
+                flex-direction: column;
+                overflow-x: auto;
+            }
+        }
+
+        .w3-button.w3-white {
+            width: 100%; /* الغاء تحديد عرض الزر الأبيض ليأخذ حجمه الطبيعي */
+            margin-bottom: 10px; /* تباعد بين الأزرار */
+            font-size: 12px; /* حجم الخط */
+            padding: 8px; /* تحديد هوامش داخلية للأزرار */
         body {
             font-family: 'Open Sans', sans-serif;
             background-color: #f4f4f4;
@@ -24,6 +56,9 @@
             box-sizing: border-box;
         }
 
+        .w3-bar {
+        flex-direction: column;
+        overflow-x: auto; /* إضافة تمرير أفقي إذا كان هناك الكثير من الأزرار */
         .main-content {
             padding: 20px;
             width: 100%;
@@ -46,7 +81,7 @@
         }
 
         .skills-column {
-            width: 100%; /* تمديد العمود ليشغل المساحة بشكل كامل */
+            width: 100%;
             max-width: 500px;
             margin-bottom: 20px;
             text-align: center;
@@ -64,7 +99,6 @@
             height: 200px;
         }
 
-        /* قواعد للكمبيوتر أو شاشات العرض الكبيرة */
         @media screen and (min-width: 768px) {
             canvas {
                 margin-top: 20px;
@@ -73,7 +107,6 @@
             }
         }
 
-        /* قواعد للموبايل أو شاشات العرض الصغيرة */
         @media screen and (max-width: 767px) {
             canvas {
                 margin-top: 20px;
@@ -96,131 +129,266 @@
             font-weight: bold;
             cursor: pointer;
             display: block;
-            margin: 20px auto;
             margin-left: auto;
             margin-right: auto;
             max-width: 200px;
             align-self: center;
         }
+    }
     </style>
 </head>
+<body class="w3-light-grey w3-content" style="max-width:1600px; display: flex; justify-content: center; flex-direction: column;">
 
-<body>
-    <h2>Technical Skills</h2>
-    <canvas id="technicalSkillsChart" width="400" height="400"></canvas>
+<body class="w3-light-grey w3-content" style="max-width:1600px; display: flex; justify-content: center; flex-direction: column;">
 
-    <h2>Interpersonal Skills</h2>
-    <canvas id="interpersonalSkillsChart" width="400" height="400"></canvas>
-    <!-- Main Content -->
-    <div class="main-content">
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
-        <div class="skills-container">
-            <div class="skills-row">
-                <div class="skills-column">
-                    <h1>Technical Skills</h1>
-                    <canvas id="technicalSkillsChart" width="300" height="300"></canvas>
-                </div>
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" >
+<div class="w3-main">
 
-                <div class="skills-column">
-                    <h1>Interpersonal Skills</h1>
-                    <canvas id="interpersonalSkillsChart" width="300" height="300"></canvas>
-                </div>
-            </div>
-
-            <a href="https://abdelrahmanmostafa07.github.io/Portfolio/" class="back-button" onclick="history.go(-1);">Back to Home</a>
-        </div>
-
+  <!-- Header -->
+  <header id="portfolio">
+    <a href="#"><img src="" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <!--<span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>-->
+    <div class="w3-container">
+    <h1><b>Abdelrahman's Portfolio</b></h1>
+    <div class="w3-section w3-bottombar w3-padding-16">
+      <!--<span class="w3-margin-right">Filter:</span>
+      <!--<button class="w3-button w3-white">Home</button-->
+    <a href="https://abdelrahmanmostafa07.github.io/Portfolio/" onclick="w3_close()" class="w3-button w3-white">Home</a>
+    <!--<button class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Skills</button> -->
+      <!-- زر Skills باستخدام عنصر a -->
+    <a href="Skills.html" onclick="w3_close()" class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>SKILLS</a>
+    <a href="About.html" onclick="w3_close()" class="w3-button w3-white">ABOUT</a>
+    <a href="ContactMe.html" onclick="w3_close()" class="w3-button w3-white">CONTACT</a>
     </div>
+    </div>
+  </header>
 
-    <script>
-        // Technical Skills Chart
-        var technicalSkillsData = {
-            labels: ["HTML", "CSS", "JavaScript", "Python", "Java"],
-        // Mock data, replace with your actual skill levels
-        const technicalSkillsData = {
-            labels: ['Microsoft Excel', 'Microsoft Power BI', 'Python', 'SQL', 'Data Visualization'],
-            datasets: [{
-                data: [90, 80, 85, 75, 70],
-                backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4CAF50", "#E91E63"]
-                data: [90, 90, 85, 90, 95],
-                backgroundColor: ['#4caf50', '#2196f3', '#ff5722', '#607d8b', '#e91e63'],
-            }]
-        };
 
-        var technicalSkillsOptions = {
-            responsive: true,
-            maintainAspectRatio: false
-        const interpersonalSkillsData = {
-            labels: ['Critical Thinking', 'Communication Skills', 'Detail Oriented', 'Problem-Solving', 'Collaboration'],
-            datasets: [{
-                label: 'Skill Proficiency',
-                backgroundColor: '#2196f3',
-                borderColor: '#2196f3',
-                borderWidth: 1,
-                data: [95, 90, 85, 80, 75],
-            }]
-        };
+  <!-- First Photo Grid-->
+<div class="w3-row-padding" style="display: flex; flex-wrap: wrap;">
+  <div class="w3-third w3-container w3-margin-bottom">
+    <a href="project1.html" target="_blank">
+      <img src="SuperStore Dashboard.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+    </a>
+    <div class="w3-container w3-white">
+      <a href="project1.html" target="_blank"><p><b>Superstore Sales Analysis</b></p></a>
+      <p>Leveraged advanced analytics and visualization to optimize sales strategies, driving measurable business performance improvements through data-driven initiatives.</p>
+  <div class="w3-row-padding" style="display: flex; flex-wrap: wrap;">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <a href="project1.html" target="_blank">
+        <img src="SuperStore Dashboard.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      </a>
+      <div class="w3-container w3-white">
+        <a href="project1.html" target="_blank"><p><b>Superstore Sales Analysis</b></p></a>
+        <p>Leveraged advanced analytics and visualization to optimize sales strategies, driving measurable business performance improvements through data-driven initiatives.</p>
+      </div>
+    </div>
+  </div>
+  <div class="w3-third w3-container w3-margin-bottom">
+    <a href="project2.html" target="_blank">
+      <img src="SuperStore Dashboard.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+    </a>
+    <div class="w3-container w3-white">
+      <a href="project2.html" target="_blank"><p><b>Consumer Behavior and Shopping Habits Analysis</b></p></a>
+      <p>Conducted a comprehensive analysis of consumer behavior and shopping habits.</p>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <a href="project2.html" target="_blank">
+        <img src="SuperStore Dashboard.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      </a>
+      <div class="w3-container w3-white">
+        <a href="project2.html" target="_blank"><p><b>Consumer Behavior and Shopping Habits Analysis</b></p></a>
+        <p>Conducted a comprehensive analysis of consumer behavior and shopping habits.</p>
+      </div>
+    </div>
+  </div>
+  <div class="w3-third w3-container">
+    <a href="project3.html" target="_blank">
+      <img src="SuperStore Dashboard.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+    </a>
+    <div class="w3-container w3-white">
+      <a href="project3.html" target="_blank"><p><b>Modern Data Science Job Trends</b></p></a>
+      <p>Analyzed data science factors to reveal dynamic salary trends.</p>
+    <div class="w3-third w3-container">
+      <a href="project3.html" target="_blank">
+        <img src="SuperStore Dashboard.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      </a>
+      <div class="w3-container w3-white">
+        <a href="project3.html" target="_blank"><p><b>Modern Data Science Job Trends</b></p></a>
+        <p>Analyzed data science factors to reveal dynamic salary trends.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-        var technicalSkillsChartCanvas = document.getElementById("technicalSkillsChart").getContext("2d");
-        var technicalSkillsChart = new Chart(technicalSkillsChartCanvas, {
-        const ctxTechnicalSkills = document.getElementById('technicalSkillsChart').getContext('2d');
-        const myTechnicalSkillsChart = new Chart(ctxTechnicalSkills, {
-            type: 'doughnut',
-            data: technicalSkillsData,
-            options: technicalSkillsOptions
-            options: {
-                plugins: {
-                    legend: {
-                        display: true,
-                        position: 'bottom',
-                    },
-                },
-                responsive: true,
-            }
-        });
+<!-- Second Photo Grid-->
+<div class="w3-row-padding">
+  <div class="w3-third w3-container w3-margin-bottom">
+    <a href="project4.html" target="_blank">
+      <img src="SuperStore Dashboard.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+    </a>
+    <div class="w3-container w3-white">
+      <a href="project4.html" target="_blank"><p><b>Attrition of Employees Case Study</b></p></a>
+      <p>This project delved into employee data to examine and comprehend the factors behind their attrition from the workplace.</p>
 
-        // Interpersonal Skills Chart
-        var interpersonalSkillsData = {
-            labels: ["Communication", "Teamwork", "Problem Solving", "Adaptability", "Leadership"],
-            datasets: [{
-                data: [85, 90, 80, 75, 70],
-                backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4CAF50", "#E91E63"]
-            }]
-        };
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <a href="project4.html" target="_blank">
+        <img src="SuperStore Dashboard.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      </a>
+      <div class="w3-container w3-white">
+        <a href="project4.html" target="_blank"><p><b>Attrition of Employees Case Study</b></p></a>
+        <p>This project delved into employee data to examine and comprehend the factors behind their attrition from the workplace.</p>
+      </div>
+    </div>
+  </div>
+  <div class="w3-third w3-container w3-margin-bottom">
+    <a href="project5.html" target="_blank">
+      <img src="SuperStore Dashboard.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+    </a>
+    <div class="w3-container w3-white">
+      <a href="project5.html" target="_blank"><p><b>Case Study about serial killers</b></p></a>
+      <p>Performed Python-based case study on serial killers, analyzing geographic distribution, temporal trends, and victim characteristics to unveil patterns.</p>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <a href="project5.html" target="_blank">
+        <img src="SuperStore Dashboard.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      </a>
+      <div class="w3-container w3-white">
+        <a href="project5.html" target="_blank"><p><b>Case Study about serial killers</b></p></a>
+        <p>Performed Python-based case study on serial killers, analyzing geographic distribution, temporal trends, and victim characteristics to unveil patterns.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <a href="project6.html" target="_blank">
+        <img src="SuperStore Dashboard.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      </a>
+      <div class="w3-container w3-white">
+        <a href="project6.html" target="_blank"><p><b>Hotels Analysis Project</b></p></a>
+        <p>Excel-driven analysis of hotel performance, encompassing booking trends, occupancy rates, and guest satisfaction metrics. Implemented advanced Excel functions and pivot tables to derive actionable insights.</p>
+      </div>
+    </div>
+  </div>
+  <div class="w3-third w3-container">
+    <a href="project6.html" target="_blank">
+      <img src="SuperStore Dashboard.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+    </a>
+    <div class="w3-container w3-white">
+      <a href="project6.html" target="_blank"><p><b>Hotels Analysis Project</b></p></a>
+      <p>Excel-driven analysis of hotel performance, encompassing booking trends, occupancy rates, and guest satisfaction metrics. Implemented advanced Excel functions and pivot tables to derive actionable insights.</p>
 
-        var interpersonalSkillsOptions = {
-            responsive: true,
-            maintainAspectRatio: false
-        };
+  <!-- Skills Section -->
+  <div class="main-content">
+    <div class="skills-container">
+      <div class="skills-row">
+        <div class="skills-column">
+          <h1>Technical Skills</h1>
+          <canvas id="technicalSkillsChart" width="300" height="300"></canvas>
+        </div>
+        <div class="skills-column">
+          <h1>Interpersonal Skills</h1>
+          <canvas id="interpersonalSkillsChart" width="300" height="300"></canvas>
+        </div>
+      </div>
+      <a href="https://abdelrahmanmostafa07.github.io/Portfolio/" class="back-button" onclick="history.go(-1);">Back to Home</a>
+    </div>
+  </div>
+</div>
 
-        var interpersonalSkillsChartCanvas = document.getElementById("interpersonalSkillsChart").getContext("2d");
-        var interpersonalSkillsChart = new Chart(interpersonalSkillsChartCanvas, {
-        const ctxInterpersonalSkills = document.getElementById('interpersonalSkillsChart').getContext('2d');
-        const myInterpersonalSkillsChart = new Chart(ctxInterpersonalSkills, {
-            type: 'bar',
-            data: interpersonalSkillsData,
-            options: interpersonalSkillsOptions
-            options: {
-                plugins: {
-                    legend: {
-                        display: false,
-                    },
-                },
-                scales: {
-                    y: {
-                        beginAtZero: false,
-                        min: 10,
-                        max: 100,
-                    },
-                    x: {
-                        grid: {
-                            display: false,
-                        },
-                    },
-                },
-            }
-        });
-    </script>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+  <script>
+    // Mock data, replace with your actual skill levels
+    const technicalSkillsData = {
+      labels: ['Microsoft Excel', 'Microsoft Power BI', 'Python', 'SQL', 'Data Visualization'],
+      datasets: [{
+        data: [90, 90, 85, 90, 95],
+        backgroundColor: ['#4caf50', '#2196f3', '#ff5722', '#607d8b', '#e91e63'],
+      }]
+    };
+
+    const interpersonalSkillsData = {
+      labels: ['Critical Thinking', 'Communication Skills', 'Detail Oriented', 'Problem-Solving', 'Collaboration'],
+      datasets: [{
+        label: 'Skill Proficiency',
+        backgroundColor: '#2196f3',
+        borderColor: '#2196f3',
+        borderWidth: 1,
+        data: [95, 90, 85, 80, 75],
+      }]
+    };
+
+    const ctxTechnicalSkills = document.getElementById('technicalSkillsChart').getContext('2d');
+    const myTechnicalSkillsChart = new Chart(ctxTechnicalSkills, {
+      type: 'doughnut',
+      data: technicalSkillsData,
+      options: {
+        plugins: {
+          legend: {
+            display: true,
+            position: 'bottom',
+          },
+        },
+        responsive: true,
+      }
+    });
+
+    const ctxInterpersonalSkills = document.getElementById('interpersonalSkillsChart').getContext('2d');
+    const myInterpersonalSkillsChart = new Chart(ctxInterpersonalSkills, {
+      type: 'bar',
+      data: interpersonalSkillsData,
+      options: {
+        plugins: {
+          legend: {
+            display: false,
+          },
+        },
+        scales: {
+          y: {
+            beginAtZero: false,
+            min: 10,
+            max: 100,
+          },
+          x: {
+            grid: {
+              display: false,
+            },
+          },
+        },
+      }
+    });
+  </script>
+
+  <script>
+    // Script to open and close sidebar
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+    }
+  </script>
 
 </body>
 
