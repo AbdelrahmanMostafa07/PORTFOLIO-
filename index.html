@@ -87,9 +87,13 @@
         }
 
         canvas {
-            margin-top: 20px;
-            width: 100%;
-            height: 200px;
+        margin-top: 20px;
+        width: 100%; /* تعيين العرض إلى 100% يجعله يأخذ عرض العنصر الأم، قد تحتاج لتعديل هذا */
+        height: auto; /* تعيين الارتفاع إلى auto يحفظ نسبة العرض والارتفاع */
+        max-width: 500px; /* تعيين أقصى عرض مسموح به للرسم البياني */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
         }
 
         @media screen and (min-width: 768px) {
