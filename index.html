@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,352 +7,139 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/686/686104.png" type="image/x-icon">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
+    body, h1, h2, h3, h4, h5, h6 {
+        font-family: 'Open Sans', sans-serif;
+    }
 
-        body, h1, h2, h3, h4, h5, h6 {
-            font-family: 'Open Sans', sans-serif;
-        }
-        
-        body {
-            background: url('') center/cover no-repeat;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            margin: 0;
-            width: 100%; /* تحديد العرض ليكون 100% من العرض الكلي للصفحة */
-            min-width: 320px; /* يمكنك تعديل هذه القيمة حسب احتياجاتك */
+    @media screen and (max-width: 767px) {
+        .w3-button.w3-third {
+            width: 100%; /* الغاء تحديد عرض الزر ليأخذ حجمه الطبيعي */
+            margin-bottom: 10px; /* تباعد بين الأزرار */
+            padding: 8px; /* تحديد هوامش داخلية للأزرار */
         }
 
         .w3-button.w3-white {
-            width: 80%;
-            margin-bottom: 18px;
-            font-size: 14px;
-            padding: 8px;
-            border-bottom: none;
-        }
-
-        .w3-third .w3-container {
-            text-align: center;
-        }
-        
-        .w3-third img {
-            width: 100%;
-            height: auto;
-            max-width: 100%;
+            width: 100%; /* الغاء تحديد عرض الزر الأبيض ليأخذ حجمه الطبيعي */
+            margin-bottom: 10px; /* تباعد بين الأزرار */
+            font-size: 12px; /* حجم الخط */
+            padding: 8px; /* تحديد هوامش داخلية للأزرار */
         }
 
         .w3-bar {
-            flex-direction: column;
-            overflow-x: auto;
+        flex-direction: column;
+        overflow-x: auto; /* إضافة تمرير أفقي إذا كان هناك الكثير من الأزرار */
         }
-
-        .skills-container {
-            background-color: #f0f8ff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            height: 96vh;
-        }
-
-        .skills-column {
-            width: 100%;
-            max-width: 500px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        
-        canvas {
-            margin-top: 20px;
-            width: 100%;
-            height: 100px;
-        }
-
-        @media screen and (min-width: 768px) {
-            .skills-column {
-                margin-bottom: 70px;
-            }
-        
-            canvas {
-                margin-top: 20px;
-                width: 70%;
-                height: 80px;
-            }
-        }
-
-        @media screen and (max-width: 767px) {
-            canvas {
-                margin-top: 20px;
-                width: auto;
-                max-width: 100%;
-                height: auto;
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-            }
-        }
-
-        #about {
-        background-color: #f5f5f5; /* لون الخلفية */
-        padding: 50px 20px; /* هامش داخلي للنصوص */
-        text-align: center; /* محاذاة النص في المنتصف */
-        }
-    
-        .about-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-    
-        #about h2 {
-            color: #333; /* لون النص */
-        }
-    
-        #about p {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #666; /* لون النص */
-            background-size: cover;
-            background-position: center;
-            padding: 50px 20px;
-            color: #fff; /* لون النص */
-        }
-
-        #projects {
-        background-color: #f5f5f5; /* قيمة لون HEX */
-        padding: 50px 20px;
-        color: #fff; /* لون النص */
-        }
-
-        #skills {
-        background-color: #3498db; /* قيمة لون HEX */
-        padding: 50px 20px;
-        color: #fff; /* لون النص */
-        }
-        
+    }
     </style>
 </head>
-
 <body class="w3-light-grey w3-content" style="max-width:1600px; display: flex; justify-content: center; flex-direction: column;">
 
-    <!-- Overlay effect when opening sidebar on small screens -->
-    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
-    <!-- !PAGE CONTENT! -->
-    <div class="w3-main">
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
-        <!-- Header -->
-        <header id="portfolio" style="position: relative; overflow: hidden; background: url('رابط الصورة') center/cover no-repeat; background-size: cover; padding: 20px; color: #fff; text-align: center;">
-            <div style="margin-bottom: 20px;">
-                <h1 style="margin: 10px 0; font-size: 2.5em;"><b>Abdelrahman's Portfolio</b></h1>
-            </div>
-            <div class="header-buttons" style="display: flex; justify-content: center;">
-                <a href="https://abdelrahmanmostafa07.github.io/Portfolio/" onclick="w3_close()" class="w3-button w3-white">Home</a>
-                <a href="#skills" onclick="w3_close()" class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Skills</a>
-                <a href="#about" class="w3-button w3-white" onclick="scrollToSection('about')">About</a>
-                <a href="ContactMe.html" onclick="w3_close()" class="w3-button w3-white">Contact</a>
-            </div>
-        </header>
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" >
 
-        <!-- Projects Section -->
-        <div id="projects" class="w3-container w3-light-grey w3-padding-32">
-        
-            <!-- First Project -->
-            <div class="w3-row-padding">
-                <div class="w3-third w3-container w3-margin-bottom">
-                    <a href="project1.html" target="_blank">
-                        <img src="SuperStore Dashboard.jpg" alt="Project 1" style="width:100%; height:100%;" class="w3-hover-opacity">
-                    </a>
-                    <div class="w3-container w3-white">
-                        <a href="project1.html" target="_blank">
-                            <p><b>Superstore Sales Analysis</b></p>
-                        </a>
-                        <p>Leveraged advanced analytics and visualization to optimize sales strategies, driving measurable business performance improvements through data-driven initiatives.</p>
-                    </div>
-                </div>
-        
-                <!-- Second Project -->
-                <div class="w3-third w3-container w3-margin-bottom">
-                    <a href="project1.html" target="_blank">
-                        <img src="SuperStore Dashboard.jpg" alt="Project 2" style="width:100%; height:100%;" class="w3-hover-opacity">
-                    </a>
-                    <div class="w3-container w3-white">
-                        <a href="project1.html" target="_blank">
-                            <p><b>Consumer Behavior and Shopping Habits Analysis</b></p>
-                        </a>
-                        <p>Conducted a comprehensive analysis of consumer behavior and shopping habits.</p>
-                    </div>
-                </div>
-        
-                <!-- Third Project -->
-                <div class="w3-third w3-container w3-margin-bottom">
-                    <a href="project1.html" target="_blank">
-                        <img src="SuperStore Dashboard.jpg" alt="Project 3" style="width:100%; height:100%;" class="w3-hover-opacity">
-                    </a>
-                    <div class="w3-container w3-white">
-                        <a href="project1.html" target="_blank">
-                            <p><b>Modern Data Science Job Trends</b></p>
-                        </a>
-                        <p>Analyzed data science factors to reveal dynamic salary trends.</p>
-                    </div>
-                </div>
-            </div>
-        
-            <!-- Second Row of Projects -->
-            <div class="w3-row-padding">
-                <!-- Fourth Project -->
-                <div class="w3-third w3-container w3-margin-bottom">
-                    <a href="project1.html" target="_blank">
-                        <img src="SuperStore Dashboard.jpg" alt="Project 4" style="width:100%; height:100%;" class="w3-hover-opacity">
-                    </a>
-                    <div class="w3-container w3-white">
-                        <a href="project1.html" target="_blank">
-                            <p><b>Attrition of Employees Case Study</b></p>
-                        </a>
-                        <p>This project delved into employee data to examine and comprehend the factors behind their attrition from the workplace.</p>
-                    </div>
-                </div>
-        
-                <!-- Fifth Project -->
-                <div class="w3-third w3-container w3-margin-bottom">
-                    <a href="project1.html" target="_blank">
-                        <img src="SuperStore Dashboard.jpg" alt="Project 5" style="width:100%; height:100%;" class="w3-hover-opacity">
-                    </a>
-                    <div class="w3-container w3-white">
-                        <a href="project1.html" target="_blank">
-                            <p><b>Case Study about serial killers</b></p>
-                        </a>
-                        <p>Performed Python-based case study on serial killers, analyzing geographic distribution, temporal trends, and victim characteristics to unveil patterns.</p>
-                    </div>
-                </div>
-        
-                <!-- Sixth Project -->
-                <div class="w3-third w3-container w3-margin-bottom">
-                    <a href="project1.html" target="_blank">
-                        <img src="SuperStore Dashboard.jpg" alt="Project 6" style="width:100%; height:100%;" class="w3-hover-opacity">
-                    </a>
-                    <div class="w3-container w3-white">
-                        <a href="project1.html" target="_blank">
-                            <p><b>Hotels Analysis Project</b></p>
-                        </a>
-                        <p>Excel-driven analysis of hotel performance, encompassing booking trends, occupancy rates, and guest satisfaction metrics. Implemented advanced Excel functions and pivot tables to derive actionable insights.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Skills Section -->
-        <div id="skills" class="w3-container w3-light-grey w3-padding-32">
-            <div class="w3-row-padding">
-                <div class="w3-col m6">
-                    <h2 style="text-align: center;">Technical Skills</h2>
-                    <canvas id="technicalSkillsChart" width="300" height="300"></canvas>
-                </div>
-                <div class="w3-col m6">
-                    <h2 style="text-align: center;">Interpersonal Skills</h2>
-                    <canvas id="interpersonalSkillsChart" width="300" height="300"></canvas>
-                </div>
-            </div>
-        </div>
-
-        <!-- About Section -->
-        <div id="about" class="w3-container w3-light-grey w3-padding-32">
-            <div class="about-container">
-                <h2>About Me</h2>
-                <p>Welcome to my portfolio! I am passionate about data science, analytics, and problem-solving. With a strong background in...</p>
-                <!-- Add more details about yourself as needed -->
-            </div>
-        </div>
-
-
-        <!-- End page content -->
+  <!-- Header -->
+  <header id="portfolio">
+    <a href="#"><img src="" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <!--<span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>-->
+    <div class="w3-container">
+    <h1><b>Abdelrahman's Portfolio</b></h1>
+    <div class="w3-section w3-bottombar w3-padding-16">
+      <!--<span class="w3-margin-right">Filter:</span>
+      <!--<button class="w3-button w3-white">Home</button-->
+    <a href="https://abdelrahmanmostafa07.github.io/Portfolio/" onclick="w3_close()" class="w3-button w3-white">Home</a>
+    <!--<button class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Skills</button> -->
+      <!-- زر Skills باستخدام عنصر a -->
+    <a href="Skills.html" onclick="w3_close()" class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>SKILLS</a>
+    <a href="About.html" onclick="w3_close()" class="w3-button w3-white">ABOUT</a>
+    <a href="ContactMe.html" onclick="w3_close()" class="w3-button w3-white">CONTACT</a>
     </div>
+    </div>
+  </header>
+
+  
+  <!-- First Photo Grid-->
+<div class="w3-row-padding" style="display: flex; flex-wrap: wrap;">
+  <div class="w3-third w3-container w3-margin-bottom">
+    <a href="first-project.html" target="_blank">
+      <img src="SuperStore Dashboard_page-0001.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+    </a>
+    <div class="w3-container w3-white">
+      <a href="first-project.html" target="_blank"><p><b>Superstore Sales Analysis</b></p></a>
+      <p>Leveraged advanced analytics and visualization to optimize sales strategies, driving measurable business performance improvements through data-driven initiatives.</p>
+    </div>
+  </div>
+  <div class="w3-third w3-container w3-margin-bottom">
+    <a href="project2.html" target="_blank">
+      <img src="customer.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+    </a>
+    <div class="w3-container w3-white">
+      <a href="project2.html" target="_blank"><p><b>Consumer Behavior and Shopping Habits Analysis</b></p></a>
+      <p>Conducted a comprehensive analysis of consumer behavior and shopping habits.</p>
+    </div>
+  </div>
+  <div class="w3-third w3-container">
+    <a href="project3.html" target="_blank">
+      <img src="data science.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+    </a>
+    <div class="w3-container w3-white">
+      <a href="project3.html" target="_blank"><p><b>Modern Data Science Job Trends</b></p></a>
+      <p>Analyzed data science factors to reveal dynamic salary trends.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Second Photo Grid-->
+<div class="w3-row-padding">
+  <div class="w3-third w3-container w3-margin-bottom">
+    <a href="project4.html" target="_blank">
+      <img src="attrition.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+    </a>
+    <div class="w3-container w3-white">
+      <a href="project4.html" target="_blank"><p><b>Attrition of Employees Case Study</b></p></a>
+      <p>This project delved into employee data to examine and comprehend the factors behind their attrition from the workplace.</p>
+    </div>
+  </div>
+  <div class="w3-third w3-container w3-margin-bottom">
+    <a href="project5.html" target="_blank">
+      <img src="Serial.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+    </a>
+    <div class="w3-container w3-white">
+      <a href="project5.html" target="_blank"><p><b>Case Study about serial killers</b></p></a>
+      <p>Performed Python-based case study on serial killers, analyzing geographic distribution, temporal trends, and victim characteristics to unveil patterns.</p>
+    </div>
+  </div>
+  <div class="w3-third w3-container">
+    <a href="project6.html" target="_blank">
+      <img src="hotels dashboard.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+    </a>
+    <div class="w3-container w3-white">
+      <a href="project6.html" target="_blank"><p><b>Hotels Analysis Project</b></p></a>
+      <p>Excel-driven analysis of hotel performance, encompassing booking trends, occupancy rates, and guest satisfaction metrics. Implemented advanced Excel functions and pivot tables to derive actionable insights.</p>
+    </div>
+  </div>
+</div>
+
+  
+<!-- End page content -->
+</div>
 
 <script>
-    // Function to create a Chart
-    function createChart(canvasId, chartType, data, options) {
-        const ctx = document.getElementById(canvasId).getContext('2d');
-        return new Chart(ctx, {
-            type: chartType,
-            data: data,
-            options: options,
-        });
-    }
-
-    // Function to scroll to a section
-    function scrollToSection(sectionId) {
-        var element = document.getElementById(sectionId);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    }
-
-    // Technical Skills Data
-    const technicalSkillsData = {
-        labels: ['Microsoft Excel', 'Microsoft Power BI', 'Python', 'SQL', 'Data Visualization'],
-        datasets: [{
-            data: [80, 70, 85, 90, 75],
-            backgroundColor: ['#4caf50', '#2196f3', '#ff5722', '#607d8b', '#e91e63'],
-        }]
-    };
-
-    // Technical Skills Chart Options
-    const technicalSkillsOptions = {
-        plugins: {
-            legend: {
-                display: true,
-                position: 'bottom',
-            },
-        },
-        responsive: true,
-    };
-
-    // Create Technical Skills Chart
-    createChart('technicalSkillsChart', 'doughnut', technicalSkillsData, technicalSkillsOptions);
-
-    // Interpersonal Skills Data
-    const interpersonalSkillsData = {
-        labels: ['Critical Thinking', 'Detail Oriented', 'Problem Solving', 'Collaboration', 'Communication Skills'],
-        datasets: [{
-            label: 'Skill Proficiency',
-            backgroundColor: '#2196f3',
-            borderColor: '#2196f3',
-            borderWidth: 1,
-            data: [95, 90, 85, 80, 75],
-        }]
-    };
-
-    // Interpersonal Skills Chart Options
-    const interpersonalSkillsOptions = {
-        plugins: {
-            legend: {
-                display: false,
-            },
-        },
-        scales: {
-            y: {
-                beginAtZero: false,
-                min: 10,
-                max: 100,
-            },
-            x: {
-                grid: {
-                    display: false,
-                },
-            },
-        },
-    };
-
-    // Create Interpersonal Skills Chart
-    createChart('interpersonalSkillsChart', 'bar', interpersonalSkillsData, interpersonalSkillsOptions);
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
 </script>
 
 </body>
-
-</html> 
+</html>
