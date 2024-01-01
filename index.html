@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- زر الرجوع لأعلى الصفحة -->
-    <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top">&#8679; Top</button>
     <style>
         html {
             scroll-behavior: smooth;
@@ -159,38 +157,6 @@
 
         .contact-content ul p {
             margin: 10px 0; /* إضافة هامش للفقرات داخل القائمة */
-        }
-
-        /* أسلوب الزر */
-        #scrollToTopBtn {
-          display: none;
-          position: fixed;
-          bottom: 20px;
-          right: 20px;
-          z-index: 99;
-          font-size: 16px;
-          border: none;
-          outline: none;
-          background-color: #2196F3;
-          color: white;
-          cursor: pointer;
-          padding: 10px;
-          border-radius: 5px;
-        }
-        
-        /* عند تحريك الشاشة إلى أسفل، قم بإظهار الزر */
-        @media screen and (max-width: 767px) {
-          #scrollToTopBtn {
-            bottom: 40px;
-          }
-        }
-        /* تأثير الظل للزر */
-        #scrollToTopBtn:hover {
-          background-color: #0b7dda;
-        }
-        /* تأثير الظل للزر */
-        #scrollToTopBtn:hover {
-          background-color: #0b7dda;
         }
 
     </style>
@@ -435,34 +401,6 @@
                skillsSection.scrollIntoView({ behavior: 'smooth' });
            }
         }
-    </script>
-
-    <script>
-    // تابع للرجوع إلى أعلى الصفحة
-    function scrollToTop() {
-      document.body.scrollTop = 0; // للمتصفحات غير IE
-      document.documentElement.scrollTop = 0; // لمتصفح IE
-    }
-    
-    // تابع لإظهار أو إخفاء الزر بناءً على التمرير
-    window.onscroll = function() {
-      scrollFunction();
-    };
-    
-    function scrollFunction() {
-      var scrollToTopBtn = document.getElementById("scrollToTopBtn");
-    
-      // إظهار الزر عند التمرير لأكثر من 100 بكسل
-      if (
-        document.body.scrollTop > 100 ||
-        document.documentElement.scrollTop > 100
-      ) {
-        scrollToTopBtn.style.display = "block";
-      } else {
-        // إخفاء الزر إذا كان أقل من 100 بكسل
-        scrollToTopBtn.style.display = "none";
-      }
-    }
     </script>
 
 </body>
