@@ -1,89 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Superstore Sales Analysis</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
+    <title>Data Analysis Project</title>
     <style>
         body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: #f2f5f9;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            min-height: 100vh;
-            justify-content: center;
-            align-items: center;
-            width: 100;
-            height: auto;
+            background-color: #f7f7f7;
+            color: #333;
         }
 
-        .analysis-container {
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-            width: 100%;
-            height: auto;
+        header {
+            background-color: #4CAF50;
+            color: white;
             text-align: center;
+            padding: 2em;
+            font-size: 2em;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
             background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
 
-        .title {
-            font-size: 36px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            color: #2196f3; /* لون العنوان */
+        h1, h2 {
+            color: #4CAF50;
         }
 
-        .content {
-            margin-bottom: 20px;
-            line-height: 1.8;
-            color: #333; /* لون النص */
-            font-size: 18px;
+        p {
+            line-height: 1.6;
         }
 
-        .image {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        pre {
+            white-space: pre-wrap;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
         }
 
-        .back-button {
-            padding: 16px 32px;
-            background-color: #2196f3;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            cursor: pointer;
-            display: inline-block;
-            transition: background-color 0.3s ease; /* تأثير تدريجي على لون الزر */
-        }
-
-        .back-button:hover {
-            background-color: #1769aa; /* لون الزر عند التحويم */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
-
 <body>
-    <div class="analysis-container">
-        <div class="title">Superstore Sales Analysis</div>
 
-        <div class="content">
-            <p>Leveraged advanced analytics and visualization to optimize sales strategies, 
-                driving measurable business performance improvements through data-driven initiatives.</p>
-        </div>
+    <header>
+        <h1>Data Analysis Project</h1>
+    </header>
 
-        <img src="SuperStore Dashboard.jpg" alt="Sales Analysis Image" class="image">
-        
-        <a href="https://abdelrahmanmostafa07.github.io/Portfolio/" class="back-button" onclick="history.go(-1);">Back to Home</a>
-    </div>
+    <section id="project-details">
+        <h2>Project Overview</h2>
+        <p>This section provides an overview of the data analysis project. You can describe the goals, methodologies, and key findings here.</p>
+    </section>
+
+    <section id="data-analysis-results">
+        <h2>Key Findings</h2>
+        <p>Present the key findings and results of your data analysis. You can include tables or charts to illustrate the insights.</p>
+    </section>
+
+    <section id="code-snippets">
+        <h2>Code Samples</h2>
+        <pre><code>
+            // Python code for data analysis
+            import pandas as pd
+            data = pd.read_csv('dataset.csv')
+            // Perform data analysis here
+        </code></pre>
+    </section>
+
+    <footer>
+        <p>© ِAbdelrahman Mostafa - 2024</p>
+    </footer>
+
 </body>
-
 </html>
