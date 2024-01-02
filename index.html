@@ -2,23 +2,18 @@
 <html lang="en">
 
 <head>
-    <!-- أجزاء head الحالية هنا -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdelrahman's Portfolio</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         html {
             scroll-behavior: smooth;
         }
-        
-        .chartjs-datalabels {
-            font-style: normal !important;
-        
-        }
+
         body {
             font-family: 'Open Sans', sans-serif;
             background-color: #f4f4f4;
@@ -34,15 +29,16 @@
             box-sizing: border-box;
         }
 
-        .skills-container {
-            background-color: #fff;
+        .skills-container,
+        .about-container,
+        .contact-container {
+            background-position: center;
             padding: 40px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+            margin-bottom: 40px;
             text-align: center;
-            height: 96vh;
-            margin-bottom: 40px; /* إضافة هامش سفلي */
-            align-items: center;
         }
 
         .skills-row {
@@ -56,7 +52,7 @@
             max-width: 600px;
             margin-bottom: 40px;
             text-align: center;
-            font-style: normal; /* جعل النص بشكل عادي، بدلاً من المائل */
+            font-style: normal;
         }
 
         h1 {
@@ -71,7 +67,6 @@
             height: 200px;
         }
 
-        /* قواعد للكمبيوتر أو شاشات العرض الكبيرة */
         @media screen and (min-width: 768px) {
             canvas {
                 margin-top: 20px;
@@ -80,7 +75,6 @@
             }
         }
 
-        /* قواعد للموبايل أو شاشات العرض الصغيرة */
         @media screen and (max-width: 767px) {
             canvas {
                 margin-top: 20px;
@@ -107,60 +101,45 @@
             margin-right: auto;
             max-width: 200px;
             align-self: center;
-
-        .w3-section.w3-bottombar.w3-padding-16 {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            border-bottom: none; /* Remove the border-bottom property */
-        }
-
-        .w3-section.w3-bottombar.w3-padding-16 a {
-            width: 100%;
-            text-align: center;
-            border-bottom: none; /* Remove the border-bottom property */
         }
 
         .about-container {
-            background-color: #fff; /* لون خلفية قسم ABOUT */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            margin-top: 40px;
+            margin-bottom: 40px;
             padding: 40px;
             text-align: center;
-            margin-top: 40px; /* إضافة هامش علوي */
-            margin-bottom: 40px; /* إضافة هامش سفلي */
-            /* يمكنك إضافة المزيد من الخصائص الخاصة بالتصميم حسب رغبتك */
         }
-            
+
         .about-content {
-            max-width: 800px; /* تحديد أقصى عرض للمحتوى */
-            margin: 0 auto; /* توسيع المحتوى وتوسيطه في الصفحة */
+            max-width: 800px;
+            margin: 0 auto;
+            color: white;
         }
 
         .contact-container {
-            background-color: #e0e0e0; /* لون خلفية قسم CONTACT ME */
-            padding: 40px; /* زيادة هامش الداخلي */
-            text-align: center; /* تحديد محاذاة النص إلى الوسط */
+            background-color: #e0e0e0;
+            padding: 40px;
+            text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-top: 40px; /* إضافة هامش علوي */
-            /* يمكنك إضافة المزيد من الخصائص الخاصة بالتصميم حسب رغبتك */
+            margin-top: 40px;
         }
-    
+
         .contact-content {
-            padding: 20px; /* تحديد هامش الداخلي للمحتوى */
-            text-align: center; /* تحديد محاذاة النص إلى اليسار */
-            max-width: 800px; /* تحديد أقصى عرض للمحتوى */
-            margin: 0 auto; /* توسيع المحتوى وتوسيطه في الصفحة */
+            padding: 20px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
         }
-            
+
         .contact-content ul {
-            list-style: none; /* إزالة النقاط من القائمة */
-            padding: 0; /* إزالة التباعد الداخلي للقائمة */
+            list-style: none;
+            padding: 0;
         }
 
         .contact-content ul p {
-            margin: 10px 0; /* إضافة هامش للفقرات داخل القائمة */
+            margin: 10px 0;
         }
-
     </style>
     
 </head>
