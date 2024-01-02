@@ -33,12 +33,13 @@
             height: 100vh;
         }
 
-        .header-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%;
+        @media screen and (max-width: 767px) {
+            header {
+                padding: 30px 0;
+            }
+            header h1 {
+                font-size: 40px;
+            }
         }
 
         header h1 {
@@ -209,6 +210,29 @@
     <script>
         // Add your scripts here
         // Mock data, replace with your actual skill levels
+        const options = {
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'bottom',
+                },
+            },
+            responsive: true,
+            maintainAspectRatio: false, // Set to false to allow dynamic resizing
+        };
+
+        const myTechnicalSkillsChart = new Chart(ctxTechnicalSkills, {
+            type: 'doughnut',
+            data: technicalSkillsData,
+            options: options,
+        });
+
+        const myInterpersonalSkillsChart = new Chart(ctxInterpersonalSkills, {
+            type: 'bar',
+            data: interpersonalSkillsData,
+            options: options,
+        });
+        
         const technicalSkillsData = {
             labels: ['Microsoft Excel', 'Microsoft Power BI', 'Python', 'SQL', 'Data Visualization'],
             datasets: [{
