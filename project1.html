@@ -34,9 +34,15 @@
         section {
             margin: 20px;
             padding: 20px;
-            width: 100%; /* Full width within the container */
             box-sizing: border-box; /* Include padding and border in the element's total width and height */
-            text-align: center; /* Center the text within the section */
+            text-align: left; /* Align text to the left within each section */
+            display: flex;
+            flex-direction: column;
+        }
+
+        p {
+            margin: 0; /* Remove default margin for paragraphs */
+            padding-left: 20px; /* Add left padding to each paragraph */
         }
     </style>
 </head>
