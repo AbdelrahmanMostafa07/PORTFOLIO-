@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-            text-align: left; /* تحديد محاذاة المحتوى في المنتصف */
+            text-align: center; /* تحديد محاذاة المحتوى في المنتصف */
         }
 
         header {
@@ -21,11 +21,14 @@
         }
 
         section {
-            margin: 20px;
+            margin: 20px auto; /* إضافة هامش من الأعلى والأسفل للمحافظة على التنسيق */
             padding: 20px;
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left; /* إعادة تحديد محاذاة النص إلى اليسار داخل section */
+            width: 80%; /* يمكنك تعديل النسبة حسب الحاجة */
+            display: inline-block; /* إضافة هذا للسماح بتحديد عرض المربع والحفاظ على التنسيق */
         }
     </style>
 </head>
@@ -37,7 +40,7 @@
 
     <section id="project-details">
         <h2>Project Goals</h2>
-        <p>The aim of my project is to explore and understand customer behavior patterns during the purchasing process. 
+        <p>The aim of my project is to explore and understand customer behavior patterns during the purchasing process.</p>
         <p>I seek to identify the factors influencing product choices and customer interactions with services.</p>
         <p>Additionally, I aim to establish connections between different variables such as age and gender to gain a better understanding of these dynamics.</p>
     </section>
