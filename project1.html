@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-            text-align: center; /* تحديد محاذاة المحتوى في المنتصف */
+            text-align: center;
         }
 
         header {
@@ -20,15 +20,19 @@
             padding: 1em;
         }
 
-        section {
-            margin: 20px auto; /* إضافة هامش من الأعلى والأسفل للمحافظة على التنسيق */
-            padding: 20px;
+        .project-container {
+            margin: 20px auto;
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: left; /* إعادة تحديد محاذاة النص إلى اليسار داخل section */
-            width: 80%; /* يمكنك تعديل النسبة حسب الحاجة */
-            display: inline-block; /* إضافة هذا للسماح بتحديد عرض المربع والحفاظ على التنسيق */
+            width: 80%;
+            text-align: left;
+            overflow: hidden; /* Clear floats within the container */
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
         }
     </style>
 </head>
@@ -38,34 +42,35 @@
         <h1>Project 1</h1>
     </header>
 
-    <section id="project-details">
-        <h2>Project Goals</h2>
-        <p>The aim of my project is to explore and understand customer behavior patterns during the purchasing process.</p>
-        <p>I seek to identify the factors influencing product choices and customer interactions with services.</p>
-        <p>Additionally, I aim to establish connections between different variables such as age and gender to gain a better understanding of these dynamics.</p>
-    </section>
-    
-    <section id="data-analysis-results">
-        <h2>Project Steps</h2>
-        <!-- يمكنك إضافة جداول أو رسوم بيانية لعرض النتائج -->
-        <h3>Define questions and hypotheses</h3>
-        <p>1- Is there a distinct pattern in age groups regarding purchasing behavior?</p>
-        <p>2- Are there gender-based differences in product preferences?</p>
-        <p>3- Does gender influence the amount spent on purchases?</p>
-        <p>4- Does the season affect the types of products purchased?</p>
-        <p>5- Is there a preferred payment method among older age groups?</p>
-        <h3>Data Cleaning: </h3>
-        <p>Examine the data to identify and correct any errors or missing values.</p>
-        <p>Take actions to enhance data quality and ensure the accuracy of the analysis.</p>
-        <h3>Data Analysis: </h3>
-        <p>Once the data has been thoroughly cleaned and prepared, the next step is to conduct a comprehensive analysis.</p>
-        <p>Utilizing statistical methods and data visualization tools, explore the dataset to derive meaningful insights. </p>
-    </section>
-    
-    <section id="code-snippets">
-        <h2>Analysis Results</h2>
-        <p>توصلنا الى بلا بلا بلا </p>
-    </section>
+    <div class="project-container">
+        <section id="project-details">
+            <h2>Project Goals</h2>
+            <p>The aim of my project is to explore and understand customer behavior patterns during the purchasing process.</p>
+            <p>I seek to identify the factors influencing product choices and customer interactions with services.</p>
+            <p>Additionally, I aim to establish connections between different variables such as age and gender to gain a better understanding of these dynamics.</p>
+        </section>
+
+        <section id="data-analysis-results">
+            <h2>Project Steps</h2>
+            <h3>Define questions and hypotheses</h3>
+            <p>1- Is there a distinct pattern in age groups regarding purchasing behavior?</p>
+            <p>2- Are there gender-based differences in product preferences?</p>
+            <p>3- Does gender influence the amount spent on purchases?</p>
+            <p>4- Does the season affect the types of products purchased?</p>
+            <p>5- Is there a preferred payment method among older age groups?</p>
+            <h3>Data Cleaning: </h3>
+            <p>Examine the data to identify and correct any errors or missing values.</p>
+            <p>Take actions to enhance data quality and ensure the accuracy of the analysis.</p>
+            <h3>Data Analysis: </h3>
+            <p>Once the data has been thoroughly cleaned and prepared, the next step is to conduct a comprehensive analysis.</p>
+            <p>Utilizing statistical methods and data visualization tools, explore the dataset to derive meaningful insights. </p>
+        </section>
+
+        <section id="code-snippets">
+            <h2>Analysis Results</h2>
+            <p>توصلنا الى بلا بلا بلا </p>
+        </section>
+    </div>
 
 </body>
 </html>
