@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-            text-align: center; /* تحديد محاذاة المحتوى في المنتصف */
+            text-align: center;
         }
 
         header {
@@ -21,14 +21,20 @@
         }
 
         section {
-            margin: 20px auto; /* إضافة هامش من الأعلى والأسفل للمحافظة على التنسيق */
+            margin: 20px auto;
             padding: 20px;
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: left; /* إعادة تحديد محاذاة النص إلى اليسار داخل section */
-            width: 80%; /* يمكنك تعديل النسبة حسب الحاجة */
-            display: inline-block; /* إضافة هذا للسماح بتحديد عرض المربع والحفاظ على التنسيق */
+            text-align: left;
+            width: 80%;
+            display: inline-block;
+        }
+
+        /* Add a style for each container */
+        .container {
+            display: block;
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -38,16 +44,15 @@
         <h1>Project 1</h1>
     </header>
 
-    <section id="project-details">
+    <section id="project-details" class="container">
         <h2>Project Goals</h2>
         <p>The aim of my project is to explore and understand customer behavior patterns during the purchasing process.</p>
         <p>I seek to identify the factors influencing product choices and customer interactions with services.</p>
         <p>Additionally, I aim to establish connections between different variables such as age and gender to gain a better understanding of these dynamics.</p>
     </section>
 
-    <section id="data-analysis-results">
+    <section id="data-analysis-results" class="container">
         <h2>Project Steps</h2>
-        <!-- يمكنك إضافة جداول أو رسوم بيانية لعرض النتائج -->
         <h3>Define questions and hypotheses</h3>
         <p>1- Is there a distinct pattern in age groups regarding purchasing behavior?</p>
         <p>2- Are there gender-based differences in product preferences?</p>
@@ -62,7 +67,7 @@
         <p>Utilizing statistical methods and data visualization tools, explore the dataset to derive meaningful insights. </p>
     </section>
 
-    <section id="code-snippets">
+    <section id="code-snippets" class="container">
         <h2>Analysis Results</h2>
         <p>توصلنا الى بلا بلا بلا </p>
     </section>
