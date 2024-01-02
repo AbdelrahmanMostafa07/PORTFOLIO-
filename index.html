@@ -210,23 +210,6 @@
     <script>
         // Add your scripts here
         // Mock data, replace with your actual skill levels
-        const options = {
-            plugins: {
-                legend: {
-                    display: true,
-                    position: 'bottom',
-                },
-            },
-            responsive: true,
-            maintainAspectRatio: false, // Set to false to allow dynamic resizing
-        };
-
-        const myTechnicalSkillsChart = new Chart(ctxTechnicalSkills, {
-            type: 'doughnut',
-            data: technicalSkillsData,
-            options: options,
-        });
-
         const myInterpersonalSkillsChart = new Chart(ctxInterpersonalSkills, {
             type: 'bar',
             data: interpersonalSkillsData,
