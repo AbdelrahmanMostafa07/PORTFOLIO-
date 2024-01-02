@@ -13,7 +13,7 @@
         html {
             scroll-behavior: smooth;
         }
-        
+
         body {
             font-family: 'Open Sans', sans-serif;
             background-color: #f4f4f4;
@@ -37,6 +37,7 @@
             header {
                 padding: 30px 0;
             }
+
             header h1 {
                 font-size: 40px;
             }
@@ -59,16 +60,14 @@
             text-decoration: none;
             font-size: 1.2em;
             font-weight: bold;
-            padding: 10px 15px; /* Add padding to make the buttons more comfortable */
-            border-radius: 5px; /* Add border-radius for a rounded appearance */
-            transition: background-color 0.3s ease; /* Add a smooth transition effect */
-        
-            /* You can customize the background color and hover color */
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
             background-color: #333;
         }
 
         nav a:hover {
-            background-color: #555; /* Change the background color on hover */
+            background-color: #555;
         }
 
         .main-content {
@@ -175,10 +174,6 @@
     <!-- Main Content -->
     <div class="main-content">
 
-        <!-- Projects Section -->
-        <section id="projects-section">
-
-
         <!-- Skills Section -->
         <div id="skills-section" class="skills-container">
             <div class="skills-row">
@@ -218,14 +213,7 @@
     </div>
 
     <script>
-        // Add your scripts here
         // Mock data, replace with your actual skill levels
-        const myInterpersonalSkillsChart = new Chart(ctxInterpersonalSkills, {
-            type: 'bar',
-            data: interpersonalSkillsData,
-            options: options,
-        });
-        
         const technicalSkillsData = {
             labels: ['Microsoft Excel', 'Microsoft Power BI', 'Python', 'SQL', 'Data Visualization'],
             datasets: [{
