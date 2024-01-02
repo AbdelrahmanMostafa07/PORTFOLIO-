@@ -23,21 +23,71 @@
             box-sizing: border-box;
         }
 
+        header {
+            background-image: url('cover.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
         .main-content {
             padding: 20px;
-            width: 100%;
             box-sizing: border-box;
+        }
+
+        .project {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .project img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .project-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .project-content p {
+            color: #333;
         }
 
         .skills-container,
         .about-container,
         .contact-container {
-            background-position: center;
-            padding: 40px;
+            background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-top: 40px;
-            margin-bottom: 40px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 40px;
             text-align: center;
         }
 
@@ -87,47 +137,13 @@
             }
         }
 
-        .back-button {
-            margin-top: auto;
-            padding: 10px 20px;
-            background-color: #2196f3;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 200px;
-            align-self: center;
-        }
-
-        .about-container {
-            background-color: #fff;
-            margin-top: 40px;
-            margin-bottom: 40px;
-            padding: 40px;
-            text-align: center;
-        }
-
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            color: white;
-        }
-
+        .about-container,
         .contact-container {
-            background-color: #e0e0e0;
-            padding: 40px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-top: 40px;
+            background-position: center;
         }
 
+        .about-content,
         .contact-content {
-            padding: 20px;
-            text-align: center;
             max-width: 800px;
             margin: 0 auto;
         }
@@ -141,13 +157,12 @@
             margin: 10px 0;
         }
     </style>
-    
 </head>
 
 <body>
 
     <!-- Header -->
-    <header id="portfolio" style="background-image: url('cover.jpg'); background-size: contain; background-position: center; width: 100%;">
+    <header id="portfolio" style="background-image: url('cover.jpg'); background-size: cover; background-position: center; width: 100%; background-repeat: no-repeat;">
         <a href="#"><img src="" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
         <div class="w3-container w3-center">
             <h1 style="text-align: center; color: #FFFFFF; font-family: 'Open Sans', sans-serif; font-size: 50px;"><b>Abdelrahman's Portfolio</b></h1>
@@ -163,80 +178,79 @@
     <!-- Main Content -->
     <div class="main-content">
 
-        <!-- المشاريع -->
-    <div class="w3-row-padding" style="display: flex; flex-wrap: wrap;" id="projects-section">
-        <!-- مشروع 1 -->
-        <div class="w3-third w3-container w3-margin-bottom">
-            <a href="project1.html" target="_blank">
-                <img src="SuperStore Dashboard.jpg" alt="Superstore Sales Analysis" style="width:100%" class="w3-hover-opacity">
-            </a>
-            <div class="w3-container w3-white">
-                <a href="project1.html" target="_blank"><p><b>Superstore Sales Analysis</b></p></a>
-                <p>Leveraged advanced analytics and visualization to optimize sales strategies, driving measurable business performance improvements through data-driven</p>
+        <!-- Projects Section -->
+        <div id="projects-section" class="w3-row-padding" style="display: flex; flex-wrap: wrap;">
+
+            <!-- Project 1 -->
+            <div class="project w3-third">
+                <img src="SuperStore Dashboard.jpg" alt="Superstore Sales Analysis">
+                <div class="project-content">
+                    <a href="project1.html" target="_blank">
+                        <h3>Superstore Sales Analysis</h3>
+                    </a>
+                    <p>Leveraged advanced analytics and visualization to optimize sales strategies, driving measurable business performance improvements through data-driven.</p>
+                </div>
             </div>
-        </div>
-    
-        <!-- مشروع 2 -->
-        <div class="w3-third w3-container w3-margin-bottom">
-            <a href="project2.html" target="_blank">
-                <img src="SuperStore Dashboard.jpg" alt="Consumer Behavior and Shopping Habits Analysis" style="width:100%" class="w3-hover-opacity">
-            </a>
-            <div class="w3-container w3-white">
-                <a href="project2.html" target="_blank"><p><b>Consumer Behavior and Shopping Habits Analysis</b></p></a>
-                <p>Leveraged advanced analytics and visualization to optimize sales strategies, driving measurable business performance improvements through data-driven</p>
+
+            <!-- Project 2 -->
+            <div class="project w3-third">
+                <img src="SuperStore Dashboard.jpg" alt="Consumer Behavior and Shopping Habits Analysis">
+                <div class="project-content">
+                    <a href="project2.html" target="_blank">
+                        <h3>Consumer Behavior and Shopping Habits Analysis</h3>
+                    </a>
+                    <p>Leveraged advanced analytics and visualization to optimize sales strategies, driving measurable business performance improvements through data-driven.</p>
+                </div>
             </div>
-        </div>
-    
-        <!-- مشروع 3 -->
-        <div class="w3-third w3-container">
-            <a href="project3.html" target="_blank">
-                <img src="SuperStore Dashboard.jpg" alt="Modern Data Science Job Trends" style="width:100%" class="w3-hover-opacity">
-            </a>
-            <div class="w3-container w3-white">
-                <a href="project3.html" target="_blank"><p><b>Modern Data Science Job Trends</b></p></a>
-                <p>Leveraged advanced analytics and visualization to optimize sales strategies, driving measurable business performance improvements through data-driven</p>
+
+            <!-- Project 3 -->
+            <div class="project w3-third">
+                <img src="SuperStore Dashboard.jpg" alt="Modern Data Science Job Trends">
+                <div class="project-content">
+                    <a href="project3.html" target="_blank">
+                        <h3>Modern Data Science Job Trends</h3>
+                    </a>
+                    <p>Leveraged advanced analytics and visualization to optimize sales strategies, driving measurable business performance improvements through data-driven.</p>
+                </div>
             </div>
-        </div>
-    </div>
-    
-    <!-- صف جديد للمشاريع -->
-    <div class="w3-row-padding">
-        <!-- مشروع 4 -->
-        <div class="w3-third w3-container w3-margin-bottom">
-            <a href="project4.html" target="_blank">
-                <img src="SuperStore Dashboard.jpg" alt="Attrition of Employees Case Study" style="width:100%" class="w3-hover-opacity">
-            </a>
-            <div class="w3-container w3-white">
-                <a href="project4.html" target="_blank"><p><b>Attrition of Employees Case Study</b></p></a>
-                <p>This project delved into employee data to examine and comprehend the factors behind their attrition from the workplace.</p>
+
+            <!-- Project 4 -->
+            <div class="project w3-third">
+                <img src="SuperStore Dashboard.jpg" alt="Attrition of Employees Case Study">
+                <div class="project-content">
+                    <a href="project4.html" target="_blank">
+                        <h3>Attrition of Employees Case Study</h3>
+                    </a>
+                    <p>This project delved into employee data to examine and comprehend the factors behind their attrition from the workplace.</p>
+                </div>
             </div>
+
+            <!-- Project 5 -->
+            <div class="project w3-third">
+                <img src="SuperStore Dashboard.jpg" alt="Attrition of Employees Case Study">
+                <div class="project-content">
+                    <a href="project4.html" target="_blank">
+                        <h3>Attrition of Employees Case Study</h3>
+                    </a>
+                    <p>This project delved into employee data to examine and comprehend the factors behind their attrition from the workplace.</p>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="project w3-third">
+                <img src="SuperStore Dashboard.jpg" alt="Case Study about serial killers">
+                <div class="project-content">
+                    <a href="project5.html" target="_blank">
+                        <h3>Case Study about serial killers</h3>
+                    </a>
+                    <p>Performed Python-based case study on serial killers, analyzing geographic distribution, temporal trends, and victim characteristics to unveil patterns.</p>
+                </div>
+            </div>
+
+            <!-- Add more projects here -->
         </div>
 
-        <!-- مشروع 5 -->
-        <div class="w3-third w3-container w3-margin-bottom">
-            <a href="project4.html" target="_blank">
-                <img src="SuperStore Dashboard.jpg" alt="Attrition of Employees Case Study" style="width:100%" class="w3-hover-opacity">
-            </a>
-            <div class="w3-container w3-white">
-                <a href="project4.html" target="_blank"><p><b>Attrition of Employees Case Study</b></p></a>
-                <p>This project delved into employee data to examine and comprehend the factors behind their attrition from the workplace.</p>
-            </div>
-        </div>
-        
-        <!-- مشروع 6 -->
-        <div class="w3-third w3-container w3-margin-bottom">
-            <a href="project5.html" target="_blank">
-                <img src="SuperStore Dashboard.jpg" alt="Case Study about serial killers" style="width:100%" class="w3-hover-opacity">
-            </a>
-            <div class="w3-container w3-white">
-                <a href="project5.html" target="_blank"><p><b>Case Study about serial killers</b></p></a>
-                <p>Performed Python-based case study on serial killers, analyzing geographic distribution, temporal trends, and victim characteristics to unveil patterns.</p>
-            </div>
-        </div>
-        <!-- ... يمكنك إضافة المزيد من المشاريع هنا ... -->
-    </div>
-        
-        <!-- المهارات -->
+        <!-- Skills Section -->
         <div id="skills-section" class="skills-container">
             <div class="skills-row">
                 <div class="skills-column">
@@ -251,44 +265,31 @@
             </div>
         </div>
 
-        <!-- قسم ABOUT -->
-        <div id="about-section" class="skills-container about-container" style="background-color: #10B9E6; background-position: center;">
-            <div class="skills-row">
-                <div class="skills-column about-content" style="color: white;">
-                    <h1 style="color: white;">About Me</h1>
-                    <p>Hello! I am Abdelrahman Mostafa<p/>
-                    <p>a data analyst with a unique vision and advanced analytical capabilities.</p>
-                    <p>I graduated from Ain Shams University in 2021</p>
-                    <p>Earning a Bachelor's degree in Business Administration</p> 
-                    <p>I have deployed my skills and experience in the field of data analysis to understand trends and extract key insights from the numbers.
-                    I have an exceptional ability to transform data into compelling stories and guide strategic decision-making, I effectively use advanced analysis tools and master programming techniques and specialized software in the field of data analysis.
-                    Thanks to my academic background and practical experience, I can make valuable contributions to improving operational performance and making smart strategic decisions.
-                    always strive to develop my skills and innovate in the field of data analysis to achieve comprehensive success.
-                    Join me on my journey of understanding data and exploring the hidden opportunities behind the numbers. Let's build an inspiring future and achieve exceptional results together.</p>
-                </div>
+        <!-- About Section -->
+        <div id="about-section" class="about-container">
+            <div class="about-content">
+                <h1>About Me</h1>
+                <p>Hello! I am Abdelrahman Mostafa, a data analyst with a unique vision and advanced analytical capabilities. I graduated from Ain Shams University in 2021, earning a Bachelor's degree in Business Administration. I have deployed my skills and experience in the field of data analysis to understand trends and extract key insights from the numbers. I have an exceptional ability to transform data into compelling stories and guide strategic decision-making. I effectively use advanced analysis tools and master programming techniques and specialized software in the field of data analysis. Thanks to my academic background and practical experience, I can make valuable contributions to improving operational performance and making smart strategic decisions. I always strive to develop my skills and innovate in the field of data analysis to achieve comprehensive success. Join me on my journey of understanding data and exploring the hidden opportunities behind the numbers. Let's build an inspiring future and achieve exceptional results together.</p>
             </div>
         </div>
 
-        <!-- قسم CONTACT ME -->
-        <div id="contact-section" class="skills-container contact-container" style="background-color: #93AFBE; background-position: center;">
-            <div class="skills-row">
-                <div class="skills-column contact-content">
-                    <h1>Contact Me</h1>
-                    <p>Feel free to reach out to me through the following channels:</p>
-                    <ul>
-                        <p>Phone: (+20) 01148639899</p>
-                        <p>Email: Abdomostafa3017@gmail.com</p>
-                        <p>LinkedIn: <a href="https://www.linkedin.com/in/abdelrahman-mostafa-1a0935217/" target="_blank">LinkedIn</a></p>
-                    </ul>
-                </div>
+        <!-- Contact Section -->
+        <div id="contact-section" class="contact-container">
+            <div class="contact-content">
+                <h1>Contact Me</h1>
+                <p>Feel free to reach out to me through the following channels:</p>
+                <ul>
+                    <li>Phone: (+20) 01148639899</li>
+                    <li>Email: Abdomostafa3017@gmail.com</li>
+                    <li>LinkedIn: <a href="https://www.linkedin.com/in/abdelrahman-mostafa-1a0935217/" target="_blank">LinkedIn</a></li>
+                </ul>
             </div>
         </div>
-        
+
     </div>
 
     <script>
-        // أضف السكريبت هنا
-        //
+        // Add your scripts here
         // Mock data, replace with your actual skill levels
         const technicalSkillsData = {
             labels: ['Microsoft Excel', 'Microsoft Power BI', 'Python', 'SQL', 'Data Visualization'],
@@ -381,13 +382,13 @@
             );
         }
 
-       // تابع للتمرير إلى قسم الأسكيلز
-       function scrollToSkills() {
-           const skillsSection = document.getElementById('skills-section');
+        // Scroll to Skills function
+        function scrollToSkills() {
+            const skillsSection = document.getElementById('skills-section');
 
-           if (skillsSection) {
-               skillsSection.scrollIntoView({ behavior: 'smooth' });
-           }
+            if (skillsSection) {
+                skillsSection.scrollIntoView({ behavior: 'smooth' });
+            }
         }
     </script>
 
