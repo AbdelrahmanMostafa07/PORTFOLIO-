@@ -4,100 +4,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Presentation</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>تحليل البيانات</title>
     <style>
         body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: #F4F7F8;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            color: #333; /* Text color for the entire page */
+            background-color: #f4f4f4;
         }
 
-        .project-header {
-            background-image: url('project-image.jpg');
-            background-size: cover;
-            background-position: center;
-            color: #fff; /* Text color for the header */
-            padding: 100px 0;
+        header {
+            background-color: #333;
+            padding: 1em;
             text-align: center;
+            color: white;
         }
 
-        .project-title {
-            font-size: 36px;
-            font-weight: bold;
-            margin-bottom: 20px;
+        main {
+            margin: 2em;
         }
 
-        .project-description {
-            font-size: 18px;
-            margin-bottom: 30px;
-            color: #777; /* Text color for the description */
-        }
-
-        .project-link {
-            font-size: 20px;
-            color: #007BFF;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 15px;
-        }
-
-        .project-link:hover {
-            text-decoration: underline;
-        }
-
-        .back-to-portfolio {
-            font-size: 18px;
+        h1 {
             color: #333;
-            margin-top: 30px;
-            display: block;
         }
 
-        .back-to-portfolio:hover {
-            color: #007BFF;
+        p {
+            color: #666;
         }
 
-        /* Add more styles as needed */
-
-        .container {
-            background-color: #fff; /* Background color for the container */
-            padding: 20px;
+        form {
+            margin-top: 2em;
+            background-color: #fff;
+            padding: 2em;
             border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5em;
+            color: #333;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 0.5em;
+            margin-bottom: 1em;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            padding: 0.7em 1em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
         }
     </style>
 </head>
 
 <body>
-
-    <!-- Project Header -->
-    <header class="project-header">
-        <h1 class="project-title">Project Title</h1>
-        <p class="project-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <a href="#" class="project-link" target="_blank">View Project</a>
+    <header>
+        <h1>تحليل البيانات</h1>
     </header>
 
-    <!-- Project Content -->
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-8 offset-md-2">
-                <h2>About the Project</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
+    <main>
+        <form>
+            <label for="dataFile">رفع ملف البيانات:</label>
+            <input type="file" id="dataFile" name="dataFile" accept=".csv, .xlsx">
 
-                <!-- Add more sections as needed -->
+            <label for="analysisType">اختر نوع التحليل:</label>
+            <select id="analysisType" name="analysisType">
+                <option value="1">تحليل الاتجاهات</option>
+                <option value="2">تحليل التكرار</option>
+                <option value="3">تحليل الارتباط</option>
+            </select>
 
-                <a href="#back-to-portfolio" class="back-to-portfolio">Back to Portfolio</a>
-            </div>
-        </div>
-    </div>
-
+            <button type="submit">بدء التحليل</button>
+        </form>
+    </main>
 </body>
 
 </html>
