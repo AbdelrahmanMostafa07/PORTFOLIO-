@@ -9,101 +9,79 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <style>
-    html {
-        scroll-behavior: smooth;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    body {
-        font-family: 'Open Sans', sans-serif;
-        background-color: #F4F7F8;
-        margin: 0;
-        padding: 0;
-        min-height: 100vh;
-        box-sizing: border-box;
-    }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #F4F7F8;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
 
-    header {
-        background-image: url('cover.jpg');
-        background-size: cover;
-        background-position: center;
-        color: #fff;
-        padding: 50px 0;
-        text-align: center;
-        height: 100vh;
-    }
-
-    @media screen and (max-width: 767px) {
         header {
-            padding: 30px 0;
+            background-image: url('cover.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+            height: 100vh;
+        }
+
+        @media screen and (max-width: 767px) {
+            header {
+                padding: 30px 0;
+            }
+
+            header h1 {
+                font-size: 40px;
+            }
         }
 
         header h1 {
-            font-size: 40px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 50px;
+            margin-bottom: 20px;
         }
-    }
 
-    header h1 {
-        font-family: 'Open Sans', sans-serif;
-        font-size: 50px;
-        margin-bottom: 20px;
-    }
+        .main-content {
+            padding: 20px;
+            box-sizing: border-box;
+        }
 
-    .main-content {
-        padding: 20px;
-        box-sizing: border-box;
-    }
+        .project-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
 
-    .about-container {
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        margin-top: 20px;
-        margin-bottom: 20px;
-        padding: 40px;
-        text-align: center;
-    }
+        .project-item {
+            margin-bottom: 15px;
+        }
 
-    .about-container,
-    .contact-container {
-        background-position: center;
-    }
+        .about-content h1 {
+            font-size: 1.8em;
+        }
 
-    .about-content,
-    .contact-content {
-        max-width: 800px;
-        margin: 0 auto;
-    }
+        .about-content p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
 
-    .contact-content ul {
-        list-style: none;
-        padding: 0;
-    }
+        #contact .fa {
+            margin-bottom: 10px;
+        }
 
-    .contact-content ul p {
-        margin: 10px 0;
-    }
-
-    .projects-container {
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        margin-top: 20px;
-        margin-bottom: 20px;
-        padding: 40px;
-        text-align: center;
-    }
-
-    .project-item {
-        margin-bottom: 30px;
-    }
-
-    .project-item img {
-        max-width: 100%;
-        border-radius: 8px;
-    }
-        
-</style>
+        #contact p {
+            font-size: 1.2em;
+        }
+    </style>
 
 </head>
 
