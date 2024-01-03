@@ -61,40 +61,13 @@
             box-sizing: border-box;
         }
 
-        .project-item img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .projects-container {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-
         .project-item {
+            transition: transform 0.3s ease-in-out;
             margin-bottom: 15px;
         }
 
-        .project-item a {
-            text-decoration: none;
-        }
-
-        .project-item h3 {
-            color: #333;
-            font-size: 20px;
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-
-        .project-item p {
-            color: #666;
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 0;
+        .project-item:hover {
+            transform: scale(1.05);
         }
 
         .project-image {
@@ -107,7 +80,7 @@
         .about-container {
             margin-top: 30px;
             padding: 40px;
-            background-color: #fff;
+            background-color: #f9f9f9;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
@@ -123,6 +96,26 @@
             line-height: 1.6;
         }
 
+        .contact-container {
+            margin-top: 40px;
+            background-color: #87CEEB;
+            color: #fff;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .contact-container h2 {
+            font-size: 24px;
+        }
+
+        .contact-container p {
+            font-size: 18px;
+        }
+
+        .contact-info {
+            font-size: 16px;
+        }
+
         .w3-button {
             text-decoration: none;
             margin-right: 22px;
@@ -134,29 +127,25 @@
         .w3-button:hover {
             color: #ABD3F0;
         }
-
     </style>
-
 </head>
 
 <body>
-
     <!-- Header -->
     <header id="home" style="background-image: url('cloud.jpg'); background-size: cover; background-position: center; width: 100%; background-repeat: no-repeat; position: relative; text-align: center;">
         <a href="#"><img src="" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
         <div class="w3-container" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
             <h1 style="color: #FFFFFF; font-family: 'Open Sans', sans-serif; font-size: 60px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);">Abdelrahman Mostafa</h1>
             <div class="w3-section w3-padding-16">
-                <a href="#projects-section" onclick="w3_close()" class="w3-button w3-white" style="background-color: transparent; color: #fff; margin-right: 22px; font-size: 24px; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);">PROJECTS</a>
-                <a href="#about-section" onclick="w3_close()" class="w3-button w3-white" style="background-color: transparent; color: #fff; margin-right: 22px; font-size: 24px; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);">ABOUT</a>
-                <a href="#contact-section" onclick="w3_close()" class="w3-button w3-white" style="background-color: transparent; color: #fff; margin-right: 22px; font-size: 24px; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);">CONTACT</a>
+                <a href="#projects-section" onclick="w3_close()" class="w3-button w3-white">PROJECTS</a>
+                <a href="#about-section" onclick="w3_close()" class="w3-button w3-white">ABOUT</a>
+                <a href="#contact-section" onclick="w3_close()" class="w3-button w3-white">CONTACT</a>
             </div>
         </div>
     </header>
 
     <!-- Main Content -->
     <div class="main-content">
-
         <!-- Projects Section -->
         <div id="projects-section" class="projects-container">
             <div class="row">
@@ -165,8 +154,8 @@
                     <div class="project-item">
                         <a href="project1.html" target="_blank">
                             <img src="SuperStore Dashboard.jpg" alt="Project 1 Image" class="project-image">
-                            <h3 style="color: #333; font-size: 20px; margin-top: 10px; margin-bottom: 10px;">Project 1</h3>
-                            <p style="color: #666; font-size: 16px; line-height: 1.6; margin-bottom: 0;">Description of Project 1.</p>
+                            <h3>Project 1</h3>
+                            <p>Description of Project 1.</p>
                         </a>
                     </div>
                 </div>
@@ -176,8 +165,8 @@
                     <div class="project-item">
                         <a href="project2.html" target="_blank">
                             <img src="dash.jpg" alt="Project 2 Image" class="project-image">
-                            <h3 style="color: #333; font-size: 20px; margin-top: 10px; margin-bottom: 10px;">Project 2</h3>
-                            <p style="color: #666; font-size: 16px; line-height: 1.6; margin-bottom: 0;">Description of Project 2.</p>
+                            <h3>Project 2</h3>
+                            <p>Description of Project 2.</p>
                         </a>
                     </div>
                 </div>
@@ -187,8 +176,8 @@
                     <div class="project-item">
                         <a href="project3.html" target="_blank">
                             <img src="SuperStore Dashboard.jpg" alt="Project 3 Image" class="project-image">
-                            <h3 style="color: #333; font-size: 20px; margin-top: 10px; margin-bottom: 10px;">Project 3</h3>
-                            <p style="color: #666; font-size: 16px; line-height: 1.6; margin-bottom: 0;">Description of Project 3.</p>
+                            <h3>Project 3</h3>
+                            <p>Description of Project 3.</p>
                         </a>
                     </div>
                 </div>
@@ -200,8 +189,8 @@
                     <div class="project-item">
                         <a href="project4.html" target="_blank">
                             <img src="SuperStore Dashboard.jpg" alt="Project 4 Image" class="project-image">
-                            <h3 style="color: #333; font-size: 20px; margin-top: 10px; margin-bottom: 10px;">Project 4</h3>
-                            <p style="color: #666; font-size: 16px; line-height: 1.6; margin-bottom: 0;">Description of Project 4.</p>
+                            <h3>Project 4</h3>
+                            <p>Description of Project 4.</p>
                         </a>
                     </div>
                 </div>
@@ -211,8 +200,8 @@
                     <div class="project-item">
                         <a href="project5.html" target="_blank">
                             <img src="SuperStore Dashboard.jpg" alt="Project 5 Image" class="project-image">
-                            <h3 style="color: #333; font-size: 20px; margin-top: 10px; margin-bottom: 10px;">Project 5</h3>
-                            <p style="color: #666; font-size: 16px; line-height: 1.6; margin-bottom: 0;">Description of Project 5.</p>
+                            <h3>Project 5</h3>
+                            <p>Description of Project 5.</p>
                         </a>
                     </div>
                 </div>
@@ -222,37 +211,20 @@
                     <div class="project-item">
                         <a href="project6.html" target="_blank">
                             <img src="SuperStore Dashboard.jpg" alt="Project 6 Image" class="project-image">
-                            <h3 style="color: #333; font-size: 20px; margin-top: 10px; margin-bottom: 10px;">Project 6</h3>
-                            <p style="color: #666; font-size: 16px; line-height: 1.6; margin-bottom: 0;">Description of Project 6.</p>
+                            <h3>Project 6</h3>
+                            <p>Description of Project 6.</p>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <style>
-            .project-item {
-                transition: transform 0.3s ease-in-out;
-            }
-
-            .project-item:hover {
-                transform: scale(1.05);
-            }
-
-            .project-image {
-                max-width: 100%;
-                height: auto;
-                border-radius: 8px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            }
-        </style>
-
         <!-- About Section -->
         <div id="about-section" class="about-container">
             <div class="row">
                 <div class="col-md-8 offset-md-2 text-center">
-                    <h2 style="color: #333; font-size: 36px; margin-bottom: 20px;">About Me</h2>
-                    <p style="font-size: 18px; color: #555; line-height: 1.8; margin-bottom: 30px;">
+                    <h2>About Me</h2>
+                    <p>
                         Welcome to my portfolio! I'm Abdelrahman Mostafa, a dedicated data analyst with a passion for turning raw data into meaningful insights. My expertise lies in leveraging statistical analysis and machine learning techniques to extract valuable information from complex datasets.
                         My data journey started with a fascination for uncovering patterns and trends that drive decision-making. I have hands-on experience in data cleaning, preprocessing, and applying advanced analytics to solve real-world problems. From defining project objectives to visualizing results, I am committed to delivering impactful data-driven solutions.
                         As a continuous learner, I stay updated with the latest advancements in data science and technology. Proficient in programming languages such as Python and R, I have experience working with popular data analysis and visualization tools.
@@ -261,41 +233,18 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Contact Section -->
-        <div id="contact-section" class="contact-container" style="background-color: #87CEEB; color: #fff; padding: 60px; text-align: center; margin-top: 40px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-            <h2 style="font-size: 28px; margin-bottom: 20px;">Contact Me</h2>
-            <p style="font-size: 18px; margin-bottom: 30px;">Feel free to reach out to me for any inquiries or collaboration opportunities.</p>
-        
+        <div id="contact-section" class="contact-container">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out to me for any inquiries or collaboration opportunities.</p>
+
             <div class="contact-info">
-                <p style="font-size: 16px; margin-bottom: 10px;">Email: <a href="mailto:your_email@example.com" style="color: #fff; text-decoration: underline;">your_email@example.com</a></p>
-                <p style="font-size: 16px; margin-bottom: 10px;">Phone: +123 456 7890</p>
-                <p style="font-size: 16px; margin-bottom: 10px;">LinkedIn: <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" style="color: #fff; text-decoration: underline;">Your LinkedIn Profile</a></p>
+                <p>Email: <a href="mailto:your_email@example.com">your_email@example.com</a></p>
+                <p>Phone: +123 456 7890</p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">Your LinkedIn Profile</a></p>
             </div>
         </div>
-        
-        <style>
-            .about-container {
-                margin-top: 40px;
-                background-color: #f9f9f9;
-                color: #333;
-                padding: 20px;
-                border-radius: 8px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            }
-        
-            .contact-container {
-                margin-top: 40px;
-                background-color: #87CEEB;
-                padding: 60px;
-                color: #fff;
-                border-radius: 8px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            }
-        </style>
-
-
-
     </div>
 </body>
 
