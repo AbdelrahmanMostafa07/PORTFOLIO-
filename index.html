@@ -129,10 +129,13 @@
         .w3-button:hover {
             color: #DCDEDF;
         }
+        
         /* لإزالة الخط الذي يظهر تحت الروابط */
         .w3-button {
-            text-decoration: none;
+            text-decoration: none !important; /* قد تحتاج إلى !important لضمان التأثير */
+            border-bottom: none !important; /* تأكيد عدم وجود حدود من النوع السفلي */
         }
+
 
     </style>
 </head>
