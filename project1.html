@@ -13,13 +13,14 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            color: #333; /* Text color for the entire page */
         }
 
         .project-header {
             background-image: url('project-image.jpg');
             background-size: cover;
             background-position: center;
-            color: #000000;
+            color: #fff; /* Text color for the header */
             padding: 100px 0;
             text-align: center;
         }
@@ -33,6 +34,7 @@
         .project-description {
             font-size: 18px;
             margin-bottom: 30px;
+            color: #777; /* Text color for the description */
         }
 
         .project-link {
@@ -57,6 +59,15 @@
         .back-to-portfolio:hover {
             color: #007BFF;
         }
+
+        /* Add more styles as needed */
+
+        .container {
+            background-color: #fff; /* Background color for the container */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 
@@ -65,7 +76,10 @@
     <!-- Project Header -->
     <header class="project-header">
         <h1 class="project-title">Project Title</h1>
-        <p></p>
+        <p class="project-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <a href="#" class="project-link" target="_blank">View Project</a>
     </header>
 
     <!-- Project Content -->
