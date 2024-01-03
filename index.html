@@ -10,18 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.polyfills.min.js"></script>
     <style>
-    <script>
-        function scrollToSection(sectionId) {
-            var section = document.getElementById(sectionId);
-            if (section) {
-                section.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        }
-    </script>
-
         html {
             scroll-behavior: smooth;
         }
@@ -256,6 +246,25 @@
                 <p>LinkedIn: <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">Your LinkedIn Profile</a></p>
             </div>
         </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var scroll = new SmoothScroll('a[href*="#"]');
+            });
+        </script>
+
+        <script>
+            function scrollToSection(sectionId) {
+                var section = document.getElementById(sectionId);
+                if (section) {
+                    section.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        </script>
+
+        
     </div>
 </body>
 
