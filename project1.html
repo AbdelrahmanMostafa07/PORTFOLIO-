@@ -3,94 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f8f8;
-            margin: 0; /* إلغاء هامش الصفحة الرئيسية */
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
+
         header {
-            background-color: #428bca;
-            color: white;
-            padding: 5px; /* تقليل ارتفاع الهيدر */
-            text-align: center;
-            position: fixed; /* تثبيت الهيدر أثناء التمرير */
+            background-color: #333;
+            padding: 10px;
+            position: fixed;
             width: 100%;
             top: 0;
-            z-index: 1000; /* تحديد ترتيب الطبقات لضمان ظهور الهيدر أعلى الصفحة */
-        }
-        header h1 {
-            font-size: 20px; /* تقليل حجم النص */
-        }
-        header .header-buttons {
-            display: flex;
-            justify-content: center; /* وسط الأزرار */
-            margin-top: 5px;
-        }
-        header .header-buttons button {
-            padding: 5px 10px;
-            font-size: 14px;
-            background-color: #5bc0de;
-            color: white;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-        section {
-            padding-top: 60px; /* تعويض للجزء الذي يختفي بسبب التثبيت */
-        }
-        .project-info {
-            margin-bottom: 20px;
-        }
-        .project-summary img {
-            max-width: 100%;
-            height: auto;
-        }
-        footer {
-            background-color: #333;
-            color: white;
+            z-index: 1000;
             text-align: center;
-            padding: 10px;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        section {
+            margin-top: 60px; /* يُضاف هذا الهامش لتجنب أن يتم تغطية المحتوى بواسطة الهيدر الثابت */
+            padding: 20px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>عرض مشروع تحليل البيانات</h1>
-        <div class="header-buttons">
-            <button onclick="location.href='home.html'">الرئيسية</button>
-            <button onclick="location.href='projects.html'">المشاريع</button>
-        </div>
-    </header>
+<header>
+    <a href="#home">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</header>
 
-    <section class="project-info">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <h2>نبذة عن المشروع</h2>
-                    <p>هنا يمكنك وضع نبذة سريعة عن مشروع تحليل البيانات الخاص بك.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="project-summary">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <h2>ملخص المشروع</h2>
-                    <p>استخدم هذا القسم لعرض صور أو رسوم بيانية أو أي نتائج رئيسية من مشروع التحليل.</p>
-                    <img src="path/to/your/image.jpg" alt="Project Summary Image">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2024 عنوان الموقع. جميع الحقوق محفوظة.</p>
-    </footer>
+<section>
+    <h1>Your Data Analysis Project</h1>
+    <!-- يمكنك إضافة المحتوى الخاص بمشروع التحليل البياني هنا -->
+</section>
 
 </body>
 </html>
