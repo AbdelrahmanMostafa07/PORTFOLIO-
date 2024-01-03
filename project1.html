@@ -21,13 +21,6 @@
             text-align: center;
         }
 
-        header a {
-            color: black;
-            text-decoration: none;
-            margin: 0 25px;
-            font-size: 16px;
-        }
-
         section {
             margin-top: 60px;
             padding: 20px;
@@ -37,14 +30,16 @@
         header a {
             color: black;
             text-decoration: none;
-            margin: 0 25px;
+            margin: 0 10px;
             font-size: 16px;
-            transition: color 0.3s; /* إضافة تأثير انتقالي لتغيير لون الزر بشكل سلس */
+            padding: 5px 10px; /* تقليل هوامش الداخلية للزر للتحكم في الطول */
+            width: 80px; /* عرض الزر */
+            height: 30px; /* طول الزر */
         }
-        
+
         header a:hover,
         header a:active {
-            color: #b7e1ff; /* تحديد لون عند التحويل أو الضغط */
+            color: #ABD3F0; /* تحديد لون عند التحويل أو الضغط */
         }
 
     </style>
