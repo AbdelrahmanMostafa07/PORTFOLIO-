@@ -1,31 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rig+Shaded:wght@300&display=swap">
+    <link href="https://db.onlinewebfonts.com/c/f7fa1772f7f05eff38b83ce762990e5d?family=Rig+Shaded+Medium+Face" rel="stylesheet">
     <style>
         body {
             margin: 0;
-            font-family: 'Rig Shaded', sans-serif;
+            font-family: 'Rig Shaded Medium Face', sans-serif;
+            font-weight: 300;
         }
 
         header {
             background-color: #f0f0f0;
-            padding: 10px;
+            padding: 7px;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
             text-align: center;
-        }
-
-        header a {
-            color: black;
-            text-decoration: none;
-            margin: 0 25px;
-            font-size: 16px;
         }
 
         section {
@@ -34,33 +27,51 @@
             text-align: center;
         }
 
-        hr {
-            border: 1px solid #ABD3F0;
-            margin-top: 10px;
-            margin-bottom: 20px;
+        header a {
+            color: black;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 16px;
+            padding: 5px 10px;
+            width: 80px;
+            height: 30px;
         }
 
-        .thin-text {
-            font-weight: 300;
+        header a:hover,
+        header a:active {
             color: #ABD3F0;
         }
+
+        section h1 {
+            position: relative;
+            display: inline-block;
+        }
+
+        section h1::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #ABD3F0;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
     </style>
 </head>
-
 <body>
 
-    <header>
-        <a href="#home">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </header>
+<header>
+    <a href="#home">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</header>
 
-    <section>
-        <h1><span class="thin-text">Your Data Analysis Project</span></h1>
-        <hr>
-        <!-- يمكنك إضافة المحتوى الخاص بمشروع التحليل البياني هنا -->
-    </section>
+<section>
+    <h1>Your Data Analysis Project</h1>
+    <!-- Add your content for the data analysis project here -->
+</section>
 
 </body>
-
 </html>
