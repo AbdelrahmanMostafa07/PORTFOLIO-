@@ -1,100 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 1</title>
+    <title>Project Presentation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #F4F7F8;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            box-sizing: border-box;
+        }
+
+        .project-header {
+            background-image: url('project-image.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 100px 0;
             text-align: center;
         }
 
-        header {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1em;
+        .project-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
         }
 
-        .project-container {
-            margin: 20px auto;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 80%;
-            overflow: hidden; /* Clear floats within the container */
-            text-align: left;
-            display: inline-block; /* Center the block */
+        .project-description {
+            font-size: 18px;
+            margin-bottom: 30px;
         }
 
-        section {
-            margin: 20px;
-            padding: 20px;
-            box-sizing: border-box; /* Include padding and border in the element's total width and height */
-            text-align: left; /* Align text to the left within each section */
-            display: flex;
-            flex-direction: column;
+        .project-link {
+            font-size: 20px;
+            color: #007BFF;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
         }
 
-        p {
-            margin: 0; /* Remove default margin for paragraphs */
-            padding-left: 20px; /* Add left padding to each paragraph */
+        .project-link:hover {
+            text-decoration: underline;
         }
 
-        #project-details {
-            display: flex;
-            flex-wrap: wrap;
+        .back-to-portfolio {
+            font-size: 18px;
+            color: #333;
+            margin-top: 30px;
+            display: block;
         }
-        
-        #project-details h3 {
-            width: 100%; /* جعل عناوين الفقرات تستغرق العرض الكامل لتظهر في أسطر منفصلة */
-        }
-        
-        #project-details p {
-            flex: 1; /* جعل الفقرات تمتد لتأخذ المساحة المتاحة بشكل متساوٍ */
-            margin: 0; /* إزالة الهوامش الافتراضية */
+
+        .back-to-portfolio:hover {
+            color: #007BFF;
         }
     </style>
 </head>
+
 <body>
 
-    <header>
-        <h1>Project 1</h1>
+    <!-- Project Header -->
+    <header class="project-header">
+        <h1 class="project-title">Project Title</h1>
+        <p class="project-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <a href="#" class="project-link" target="_blank">View Project</a>
     </header>
 
-    <div class="project-container">
-        <section id="project-details">
-            <h2>Project Goals</h2>
-            <p>The aim of my project is to explore and understand customer behavior patterns during the purchasing process.</p>
-            <p>I seek to identify the factors influencing product choices and customer interactions with services.</p>
-            <p>Additionally, I aim to establish connections between different variables such as age and gender to gain a better understanding of these dynamics.</p>
-        </section>
+    <!-- Project Content -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h2>About the Project</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
 
-        <section id="data-analysis-results">
-            <h2>Project Steps</h2>
-            <h3>Define questions and hypotheses</h3>
-            <p>1- Is there a distinct pattern in age groups regarding purchasing behavior?</p>
-            <p>2- Are there gender-based differences in product preferences?</p>
-            <p>3- Does gender influence the amount spent on purchases?</p>
-            <p>4- Does the season affect the types of products purchased?</p>
-            <p>5- Is there a preferred payment method among older age groups?</p>
-            <h3>Data Cleaning: </h3>
-            <p>Examine the data to identify and correct any errors or missing values.</p>
-            <p>Take actions to enhance data quality and ensure the accuracy of the analysis.</p>
-            <h3>Data Analysis: </h3>
-            <p>Once the data has been thoroughly cleaned and prepared, the next step is to conduct a comprehensive analysis.</p>
-            <p>Utilizing statistical methods and data visualization tools, explore the dataset to derive meaningful insights. </p>
-        </section>
+                <!-- Add more sections as needed -->
 
-        <section id="code-snippets">
-            <h2>Analysis Results</h2>
-            <p>توصلنا الى بلا بلا بلا </p>
-        </section>
+                <a href="#back-to-portfolio" class="back-to-portfolio">Back to Portfolio</a>
+            </div>
+        </div>
     </div>
 
 </body>
+
 </html>
