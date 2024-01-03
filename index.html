@@ -12,6 +12,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.polyfills.min.js"></script>
     <style>
+        html, body {
+            overflow-x: hidden;
+        }
+
         html {
             scroll-behavior: smooth;
         }
@@ -84,7 +88,6 @@
             color: #333;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 100vw; /* تعديل هنا لجعل العرض يأخذ عرض الشاشة بالكامل */
             box-sizing: border-box;
         }
 
@@ -136,12 +139,6 @@
         .w3-button {
             text-decoration: none !important; /* قد تحتاج إلى !important لضمان التأثير */
             border-bottom: none !important; /* تأكيد عدم وجود حدود من النوع السفلي */
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
         }
         
     </style>
