@@ -3,116 +3,121 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdelrahman's Portfolio</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
+    html {
+        scroll-behavior: smooth;
+    }
 
-        body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: #F4F7F8;
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            box-sizing: border-box;
-        }
+    body {
+        font-family: 'Open Sans', sans-serif;
+        background-color: #F4F7F8;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        box-sizing: border-box;
+    }
 
+    header {
+        background-image: url('cover.jpg');
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+        padding: 50px 0;
+        text-align: center;
+        height: 100vh;
+    }
+
+    @media screen and (max-width: 767px) {
         header {
-            background-image: url('cover.jpg');
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-            padding: 50px 0;
-            text-align: center;
-            height: 100vh;
-        }
-
-        @media screen and (max-width: 767px) {
-            header {
-                padding: 30px 0;
-            }
-
-            header h1 {
-                font-size: 40px;
-            }
-
-            .w3-section.w3-padding-16 a {
-                font-size: 18px;
-                margin-right: 0;
-            }
+            padding: 30px 0;
         }
 
         header h1 {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 50px;
-            margin-bottom: 20px;
+            font-size: 40px;
         }
+    }
 
-        .main-content {
-            padding: 20px;
-            box-sizing: border-box;
-        }
+    header h1 {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 50px;
+        margin-bottom: 20px;
+    }
 
-        .about-container,
-        .contact-container,
-        .projects-container {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
-            margin-bottom: 20px;
-            padding: 40px;
-            text-align: center;
-        }
+    .main-content {
+        padding: 20px;
+        box-sizing: border-box;
+    }
 
-        .about-container,
-        .contact-container {
-            background-position: center;
-        }
+    .about-container {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 40px;
+        text-align: center;
+    }
 
-        .about-content,
-        .contact-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
+    .about-container,
+    .contact-container {
+        background-position: center;
+    }
 
-        .contact-content ul {
-            list-style: none;
-            padding: 0;
-        }
+    .about-content,
+    .contact-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
 
-        .contact-content ul p {
-            margin: 10px 0;
-        }
+    .contact-content ul {
+        list-style: none;
+        padding: 0;
+    }
 
-        .project-item {
-            margin-bottom: 30px;
-        }
+    .contact-content ul p {
+        margin: 10px 0;
+    }
 
-        .project-item img {
-            max-width: 100%;
-            border-radius: 8px;
-        }
-    </style>
+    .projects-container {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 40px;
+        text-align: center;
+    }
+
+    .project-item {
+        margin-bottom: 30px;
+    }
+
+    .project-item img {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+        
+</style>
+
 </head>
 
 <body>
 
     <!-- Header -->
-    <header id="portfolio">
+    <header id="portfolio" style="background-image: url('cloud.jpg'); background-size: cover; background-position: center; width: 100%; background-repeat: no-repeat; position: relative; text-align: center;">
         <a href="#"><img src="" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
-        <div class="w3-container">
-            <h1>Abdelrahman Mostafa</h1>
+        <div class="w3-container" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <h1 style="color: #FFFFFF; font-family: 'Open Sans', sans-serif; font-size: 70px; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);">Abdelrahman Mostafa</h1>
             <div class="w3-section w3-padding-16">
-                <a href="#projects-section" onclick="w3_close()" class="w3-button w3-white">PROJECTS</a>
-                <a href="#about-section" onclick="w3_close()" class="w3-button w3-white">ABOUT</a>
-                <a href="#contact-section" onclick="w3_close()" class="w3-button w3-white">CONTACT</a>
+                <a href="#projects-section" onclick="w3_close()" class="w3-button w3-white" style="background-color: transparent; color: #fff; margin-right: 22px; font-size: 24px; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);">PROJECTS</a>
+                <a href="#about-section" onclick="w3_close()" class="w3-button w3-white" style="background-color: transparent; color: #fff; margin-right: 22px; font-size: 24px; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);">ABOUT</a>
+                <a href="#contact-section" onclick="w3_close()" class="w3-button w3-white" style="background-color: transparent; color: #fff; margin-right: 22px; font-size: 24px; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);">CONTACT</a>
             </div>
         </div>
     </header>
@@ -133,7 +138,7 @@
                         <p>Description of Project 1.</p>
                     </div>
                 </div>
-
+        
                 <!-- Project 2 -->
                 <div class="col-md-4">
                     <div class="project-item">
@@ -144,7 +149,7 @@
                         <p>Description of Project 2.</p>
                     </div>
                 </div>
-
+        
                 <!-- Project 3 -->
                 <div class="col-md-4">
                     <div class="project-item">
@@ -156,7 +161,7 @@
                     </div>
                 </div>
             </div>
-
+        
             <div class="row">
                 <!-- Project 4 -->
                 <div class="col-md-4">
@@ -168,7 +173,7 @@
                         <p>Description of Project 4.</p>
                     </div>
                 </div>
-
+        
                 <!-- Project 5 -->
                 <div class="col-md-4">
                     <div class="project-item">
@@ -179,7 +184,7 @@
                         <p>Description of Project 5.</p>
                     </div>
                 </div>
-
+        
                 <!-- Project 6 -->
                 <div class="col-md-4">
                     <div class="project-item">
@@ -192,16 +197,16 @@
                 </div>
             </div>
         </div>
-
+        
         <!-- About Section -->
         <div id="about-section" class="about-container">
             <div class="about-content">
-                <h1>About Me</h1>
-                <p>Hello! I am Abdelrahman Mostafa, a data analyst with a unique vision and advanced analytical capabilities. I graduated from Ain Shams University in 2021, earning a Bachelor's degree in Business Administration.</p>
-                <p>I have deployed my skills and experience in the field of data analysis to understand trends and extract key insights from the numbers. I have an exceptional ability to transform data into compelling stories and guide strategic decision-making.</p>
-                <p>I effectively use advanced analysis tools and master programming techniques and specialized software in the field of data analysis. Thanks to my academic background and practical experience, I can make valuable contributions to improving operational performance and making smart strategic decisions.</p>
-                <p>I always strive to develop my skills and innovate in the field of data analysis to achieve comprehensive success. Join me on my journey of understanding data and exploring the hidden opportunities behind the numbers. Let's build an inspiring future and achieve exceptional results together.</p>
-                <p>Check out my CV: <a href="https://drive.google.com/file/d/1uoDl-AOTGHXOmK3zZfeW_ANQAqvKyM9r/view?usp=sharing" download>here</a>.</p>
+                <h1 style="font-size: 2em; line-height: 1.5;">About Me</h1>
+                <p style="font-size: 1.2em; line-height: 1.6;">Hello! I am Abdelrahman Mostafa, a data analyst with a unique vision and advanced analytical capabilities. I graduated from Ain Shams University in 2021, earning a Bachelor's degree in Business Administration.</p>
+                <p style="font-size: 1.2em; line-height: 1.6;">I have deployed my skills and experience in the field of data analysis to understand trends and extract key insights from the numbers. I have an exceptional ability to transform data into compelling stories and guide strategic decision-making.</p>
+                <p style="font-size: 1.2em; line-height: 1.6;">I effectively use advanced analysis tools and master programming techniques and specialized software in the field of data analysis. Thanks to my academic background and practical experience, I can make valuable contributions to improving operational performance and making smart strategic decisions.</p>
+                <p style="font-size: 1.2em; line-height: 1.6;">I always strive to develop my skills and innovate in the field of data analysis to achieve comprehensive success. Join me on my journey of understanding data and exploring the hidden opportunities behind the numbers. Let's build an inspiring future and achieve exceptional results together.</p>
+                <p style="font-size: 1.2em; line-height: 1.6;">Check out my CV: <a href="https://drive.google.com/file/d/1uoDl-AOTGHXOmK3zZfeW_ANQAqvKyM9r/view?usp=sharing" download>here</a>.</p>
             </div>
         </div>
 
@@ -218,7 +223,7 @@
                     <div class="col-lg-4 col-lg-offset-2 text-center">
                         <i class="fa fa-envelope-o fa-3x mb-3" style="color: #3498db;"></i>
                         <p>
-                            <a href="mailto:Abdomostafa3017@gmail.com" style="text-decoration: none; color: #333;">Abdomostafa3017@gmail.com</a>
+                            <a href="Abdomostafa3017@gmail.com" style="text-decoration: none; color: #333;">Abdomostafa3017@gmail.com</a>
                         </p>
                     </div>
                     <div class="col-lg-4 text-center">
