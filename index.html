@@ -79,11 +79,15 @@
         }
 
         .about-container {
-            margin-top: 30px;
-            padding: 40px;
+            border-radius: 0; /* إلغاء الحواف الدائرية */
+            margin-top: 40px;
             background-color: #f9f9f9;
-            border-radius: 8px;
+            color: #333;
+            padding: 20px;
+            border-radius: 0; /* تحديد الحواف مربعة */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%; /* جعل العرض يغطي عرض الشاشة بالكامل */
+            box-sizing: border-box; /* تأكد من أن الهوامش والحدود لا تزيد عن عرض الشاشة */
         }
 
         .about-container h2 {
@@ -134,14 +138,6 @@
         .w3-button {
             text-decoration: none !important; /* قد تحتاج إلى !important لضمان التأثير */
             border-bottom: none !important; /* تأكيد عدم وجود حدود من النوع السفلي */
-        }
-
-        .project-image {
-            max-width: 100%;
-            height: 600px; /* ارتفاع ثابت يمكنك تعديله حسب احتياجاتك */
-            object-fit: cover; /* يحافظ على نسب العرض والارتفاع ويملأ الإطار */
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
     </style>
