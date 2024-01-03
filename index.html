@@ -249,9 +249,12 @@
 
         <script>
             document.addEventListener('DOMContentLoaded', function () {
-                var scroll = new SmoothScroll('a[href*="#"]');
+                var scroll = new SmoothScroll('a[href*="#"]', {
+                    speed: 800,  // يمكنك ضبط قيمة السرعة حسب الحاجة
+                });
             });
         </script>
+
 
         <script>
             function scrollToSection(sectionId) {
