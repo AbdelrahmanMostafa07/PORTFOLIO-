@@ -43,7 +43,7 @@
         }
 
         section h1 {
-            color: #404042; /* لون النص لعنوان Your Data Analysis Project */
+            color: #404042;
             position: relative;
             display: inline-block;
         }
@@ -52,11 +52,25 @@
             content: '';
             display: block;
             width: 100%;
-            height: 1px; /* Adjust the height for a thinner underline */
+            height: 1px;
             background-color: #ABD3F0;
             position: absolute;
-            bottom: -5px; /* Adjust the value to move the underline down */
+            bottom: -5px;
             left: 0;
+        }
+
+        section .project-steps {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        section .project-steps ol {
+            list-style-type: decimal;
+            padding-left: 20px;
+        }
+
+        section .project-steps li {
+            margin-bottom: 20px;
         }
 
     </style>
@@ -71,7 +85,17 @@
 
 <section>
     <h1>Your Data Analysis Project</h1>
-    <!-- Add your content for the data analysis project here -->
+    <div class="project-steps">
+        <p>As a data analyst, you will follow these steps in your project:</p>
+        <ol>
+            <li><strong>Define the problem or question:</strong> Clearly articulate the specific problem or question you want to address through your data analysis.</li>
+            <li><strong>Collect and explore the data:</strong> Gather relevant data and explore its characteristics, identifying patterns or anomalies.</li>
+            <li><strong>Clean and preprocess the data:</strong> Handle missing values, outliers, and ensure the data is in a suitable format for analysis.</li>
+            <li><strong>Apply statistical or machine learning techniques:</strong> Utilize appropriate methods to analyze the data, depending on the nature of your question.</li>
+            <li><strong>Visualize and interpret the results:</strong> Create visualizations to communicate findings and interpret the results in the context of the problem.</li>
+            <li><strong>Communicate your findings:</strong> Prepare reports or presentations to effectively communicate your insights and recommendations.</li>
+        </ol>
+    </div>
 </section>
 
 </body>
