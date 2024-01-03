@@ -11,10 +11,27 @@
             background-color: #f8f8f8;
         }
         header {
-            background-color: #333;
+            background-color: #428bca; /* تغيير لون الهيدر إلى لون أزرق غامق */
             color: white;
-            padding: 20px;
+            padding: 10px;
             text-align: center;
+        }
+        header h1 {
+            font-size: 24px;
+        }
+        header .header-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        header .header-buttons button {
+            padding: 5px 10px;
+            font-size: 14px;
+            background-color: #5bc0de; /* تغيير لون الأزرار إلى لون أزرق فاتح */
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
         }
         section {
             padding: 40px 0;
@@ -41,6 +58,10 @@
 
     <header>
         <h1>عرض مشروع تحليل البيانات</h1>
+        <div class="header-buttons">
+            <button onclick="location.href='home.html'">الرئيسية</button>
+            <button onclick="location.href='projects.html'">المشاريع</button>
+        </div>
     </header>
 
     <section class="project-info">
