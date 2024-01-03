@@ -8,11 +8,12 @@
         body {
             margin: 0;
             font-family: 'Rig Shaded Medium Face', sans-serif;
+            font-weight: 300; /* تعيين وزن الخط إلى Light */
         }
 
         header {
             background-color: #f0f0f0;
-            padding: 10px;
+            padding: 7px;
             position: fixed;
             width: 100%;
             top: 0;
@@ -32,6 +33,20 @@
             padding: 20px;
             text-align: center;
         }
+
+        header a {
+            color: black;
+            text-decoration: none;
+            margin: 0 25px;
+            font-size: 16px;
+            transition: color 0.3s; /* إضافة تأثير انتقالي لتغيير لون الزر بشكل سلس */
+        }
+        
+        header a:hover,
+        header a:active {
+            color: #b7e1ff; /* تحديد لون عند التحويل أو الضغط */
+        }
+
     </style>
 </head>
 <body>
