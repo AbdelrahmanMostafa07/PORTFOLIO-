@@ -282,13 +282,13 @@
 
         <script>
             document.addEventListener('DOMContentLoaded', function () {
-                // إذا كان هناك fragment identifier، أي جزء بعد الـ #
-                if (window.location.hash) {
-                    // قم بتحديد الموقع الرأسي إلى المكان المحدد بواسطة الـ fragment identifier
-                    window.scrollTo(0, document.querySelector(window.location.hash).offsetTop);
-                } else {
-                    // إذا لم يكن هناك fragment identifier، قم بتحديد الموقع الرأسي إلى الأعلى
+                // إذا كان المسار الحالي هو المسار الرئيسي
+                if (window.location.pathname === "/Portfolio/") {
+                    // قم بتحديد الموقع الرأسي إلى الأعلى
                     window.scrollTo(0, 0);
+                } else if (window.location.hash) {
+                    // إذا كان هناك fragment identifier، قم بتحديد الموقع الرأسي إلى المكان المحدد بواسطة الـ fragment identifier
+                    window.scrollTo(0, document.querySelector(window.location.hash).offsetTop);
                 }
         
                 // إنشاء كائن SmoothScroll
