@@ -87,10 +87,14 @@
             text-align: center;
             opacity: 0;
             transition: opacity 0.3s ease-in-out;
+            background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+            padding: 20px; /* Adjust padding as needed */
+            border-radius: 8px; /* Optional: Add border-radius for a rounded look */
         }
 
         .project-item:hover .project-details {
             opacity: 1;
+            background-color: rgba(173, 216, 230, 0.8); /* Light blue overlay */
         }
                 
         .project-item a {
@@ -125,7 +129,7 @@
         .project-item h3 {
             margin-top: 10px; /* Add some space between image and title */
             position: absolute;
-            bottom: 0;
+            bottom: 10px; /* Adjust the distance from the bottom as needed */
             background-color: transparent;
             width: 100%;
             margin: 0;
@@ -133,6 +137,7 @@
             box-sizing: border-box;
             text-align: center;
             font-size: 18px;
+            color: #fff; /* White text color */
         }
 
         .project-details p {
@@ -143,10 +148,10 @@
             top: 10px; /* تعديل هذه القيمة حسب الحاجة لتحديد المسافة بين العنوان والوصف */
         }
 
-        .project-item p {
-            color: #666; /* Dark gray text color for description */
-            margin-bottom: 10px;
-            line-height: 1.6;
+        .project-details p {
+            margin: 10px 0; /* Add space between title and description */
+            font-size: 14px;
+            color: #fff; /* White text color */
         }
 
         .about-container {
