@@ -280,14 +280,21 @@
         </div>
 
 
-       <script>
+        <!-- Add this script in the head section of your HTML -->
+        <script>
             document.addEventListener('DOMContentLoaded', function () {
-                // إنشاء كائن SmoothScroll
+                // Check if it's a page refresh
+                if (performance.navigation.type === 1) {
+                    // Redirect to the specified URL
+                    window.location.href = 'https://abdelrahmanmostafa07.github.io/Portfolio/';
+                }
+        
+                // Initialize SmoothScroll
                 var scroll = new SmoothScroll('a[href*="#"]', {
-                    speed: 1100,
+                    speed: 1200,
                 });
         
-                // وظيفة للتمرير السلس إلى القسم المحدد
+                // Function to scroll smoothly to the specified section
                 window.scrollToSection = function (sectionId) {
                     var section = document.getElementById(sectionId);
                     if (section) {
