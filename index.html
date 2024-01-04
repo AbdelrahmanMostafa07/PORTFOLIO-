@@ -139,7 +139,7 @@
             margin-top: 40px;
             background-color: #ECF0F3;
             color: #333;
-            padding: 40px 0; /* Adjust padding to remove space on the right and left */
+            padding: 40px 20px; /* Adjust padding to remove space on the right and left */
             width: 100%; /* Make the container full-width */
             box-sizing: border-box;
             text-align: center;
@@ -148,12 +148,23 @@
         .about-container h2 {
             font-size: 36px;
             color: #333;
+            margin-bottom: 20px; /* Add some space between the title and paragraphs */
         }
 
         .about-container p {
             font-size: 18px;
             color: #666;
             line-height: 1.6;
+            margin-bottom: 15px; /* Add space between paragraphs */
+        }
+
+        .about-container h2::after {
+            content: '';
+            display: block;
+            width: 35%;
+            height: 1px;
+            background-color: #D3ECFF;
+            margin: 10px auto;
         }
 
         .contact-container {
