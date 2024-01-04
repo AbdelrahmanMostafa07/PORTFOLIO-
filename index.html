@@ -80,7 +80,6 @@
             margin-bottom: 2px;
             flex: 0 0 calc(33.3333% - 20px); /* Adjust width and margin as needed */
             margin: 10px; /* Adjust margin to reduce space between project items */
-            border: 2px solid transparent; /* Add border to make it transparent initially */
             transition: border-color 0.3s ease-in-out; /* Add transition effect */
         }
         
@@ -132,7 +131,10 @@
 
         .project-item:hover {
             transform: scale(1);
-            border-color: #007BFF; /* Change border color to blue on hover */
+        }
+
+        .project-item:hover img {
+            filter: grayscale(100%) sepia(100%) brightness(70%); /* Adjust the values as needed */
         }
 
         .about-container {
