@@ -280,39 +280,34 @@
         </div>
 
 
-
         <script>
             document.addEventListener('DOMContentLoaded', function () {
-                var scroll = new SmoothScroll('a[href*="#"]', {
-                    speed: 1100,  // يمكنك ضبط قيمة السرعة حسب الحاجة
-                });
-            });
-        </script>
-
-
-        <script>
-            function scrollToSection(sectionId) {
-                var section = document.getElementById(sectionId);
-                if (section) {
-                    section.scrollIntoView({
-                        behavior: 'smooth'
-                    });
+                // إذا كان هناك fragment identifier، أي جزء بعد الـ #
+                if (window.location.hash) {
+                    // قم بتحديد الموقع الرأسي إلى المكان المحدد بواسطة الـ fragment identifier
+                    window.scrollTo(0, document.querySelector(window.location.hash).offsetTop);
+                } else {
+                    // إذا لم يكن هناك fragment identifier، قم بتحديد الموقع الرأسي إلى الأعلى
+                    window.scrollTo(0, 0);
                 }
-            }
-        </script>
-
-        <script>
-            // عندما تكون الصفحة جاهزة
-            document.addEventListener('DOMContentLoaded', function () {
-                // قم بتحديد الموقع الرأسي إلى الأعلى
-                window.scrollTo(0, 0);
-                
+        
                 // إنشاء كائن SmoothScroll
                 var scroll = new SmoothScroll('a[href*="#"]', {
                     speed: 1100,
                 });
+        
+                // وظيفة للتمرير السلس إلى القسم المحدد
+                window.scrollToSection = function (sectionId) {
+                    var section = document.getElementById(sectionId);
+                    if (section) {
+                        section.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                };
             });
         </script>
+
 
         
     </div>
