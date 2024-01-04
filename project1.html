@@ -10,6 +10,8 @@
             margin: 0;
             font-family: 'Rig Shaded Medium Face', sans-serif;
             font-weight: 300;
+            line-height: 1.6; /* Adjust the line height for better readability */
+            padding-top: 70px; /* Increase the top padding to give more space for the fixed header */
         }
 
         header {
@@ -30,6 +32,7 @@
             font-family: 'Open Sans Light', sans-serif;
             font-weight: 300;
             font-size: 20px;
+            line-height: 1.6; /* Adjust the line height within the section */
         }
 
         section .project-section {
@@ -37,6 +40,7 @@
             max-width: 800px;
             margin: 0 auto;
             word-wrap: break-word;
+            margin-bottom: 20px; /* Add margin between project sections */
         }
 
         header a {
@@ -87,31 +91,31 @@
 
     <!-- Project Description -->
     <div class="project-section">
-        <h2>Description:</h2>
+        <h3>Description:</h3>
         <p>In this project, I tackled the intricacies of cleaning and analyzing a dataset containing cricket player statistics. The dataset, sourced from <a href="https://www.espncricinfo.com/records/highest-career-batting-average-282910" target="_blank">ESPNcricinfo</a>, required extensive cleaning to prepare it for meaningful analysis. The primary goal was to enhance the dataset's quality, enabling more accurate insights into the performance of cricket players.</p>
     </div>
 
     <!-- Code Organization -->
     <div class="project-section">
-        <h2>Code Organization:</h2>
+        <h3>Code Organization:</h3
         <p>The code is organized logically, leveraging Python and the pandas library for efficient data manipulation. Each step is accompanied by comments explaining the rationale behind the decisions made during the cleaning process. For instance, I utilized the fillna method to handle missing values in critical columns such as 'Balls_Faced' and 'Strike_Rate.'</p>
     </div>
 
     <!-- Additional Details -->
     <div class="project-section">
-        <h2>Additional Details:</h2>
+        <h3>Additional Details:</h3>
         <p>The dataset presented challenges, such as missing values and inconsistent formats, which I addressed methodically. I opted for a careful approach, verifying data uniqueness after splitting the 'Span' column into 'Rookie-Year' and 'Final-Year' to ensure accurate analysis.</p>
     </div>
 
     <!-- Displaying Results -->
     <div class="project-section">
-        <h2>Displaying Results:</h2>
+        <h3>Displaying Results:</h3>
         <p>Visualizations, including bar charts and tables, were employed to illustrate key findings. The removal of duplicates significantly improved data integrity, leading to more reliable analysis outcomes.</p>
     </div>
 
     <!-- Presenting Insights -->
     <div class="project-section">
-        <h2>Presenting Insights:</h2>
+        <h3>Presenting Insights:</h3>
         <p>Analysis of players' career length and batting strike rates over a decade provided valuable insights into their sustained performance. Notably, the mean career length and average strike rates for players with over 10 years of experience were calculated to discern trends.</p>
     </div>
 
