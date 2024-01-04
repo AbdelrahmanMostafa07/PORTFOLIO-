@@ -282,27 +282,11 @@
 
        <script>
             document.addEventListener('DOMContentLoaded', function () {
-                // تحديد الموقع الرأسي عند التحميل
-                if (window.location.pathname === "/Portfolio/" || window.location.hash) {
-                    window.scrollTo(0, 0);
-                }
-            
-                // حفظ عنوان الرابط إذا كان هناك هاش
-                if (window.location.hash) {
-                    sessionStorage.setItem('defaultLink', "https://abdelrahmanmostafa07.github.io/Portfolio/");
-                }
-            
-                // التحقق من وجود رابط افتراضي وعدم حدوث ريفرش
-                var storedLink = sessionStorage.getItem('defaultLink');
-                if (storedLink && performance.navigation.type !== 1) {
-                    window.location.href = storedLink;
-                }
-            
                 // إنشاء كائن SmoothScroll
                 var scroll = new SmoothScroll('a[href*="#"]', {
                     speed: 1100,
                 });
-            
+        
                 // وظيفة للتمرير السلس إلى القسم المحدد
                 window.scrollToSection = function (sectionId) {
                     var section = document.getElementById(sectionId);
@@ -312,16 +296,7 @@
                         });
                     }
                 };
-            
-                // إعادة التحقق من وجود هاش بعد تحديث الصفحة
-                window.addEventListener('hashchange', function () {
-                    // حفظ عنوان الرابط إذا كان هناك هاش
-                    if (window.location.hash) {
-                        sessionStorage.setItem('defaultLink', "https://abdelrahmanmostafa07.github.io/Portfolio/");
-                    }
-                });
             });
-
         </script>
 
         
