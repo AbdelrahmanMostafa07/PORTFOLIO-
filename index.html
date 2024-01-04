@@ -82,14 +82,15 @@
         
         .project-item img {
             transition: filter 0.3s ease-in-out;
-            width: 100%;
-            height: auto;
+            width: 100%; /* Make all project images the same width */
+            height: 320px; /* Fixed height */
+            object-fit: cover;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .project-item:hover img {
-            filter: hue-rotate(180deg); /* Adjust the degree value for your desired shade of blue */
+            filter: brightness(70%);
         }
 
         .project-details {
