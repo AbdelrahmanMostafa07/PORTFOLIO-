@@ -216,16 +216,46 @@
             text-decoration: none !important; /* قد تحتاج إلى !important لضمان التأثير */
             border-bottom: none !important; /* تأكيد عدم وجود حدود من النوع السفلي */
         }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.8); /* لون الخلفية */
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* ظل الشريط */
+        }
+
+        nav a {
+            color: #FFFFFF; /* لون النص */
+            text-decoration: none;
+            margin-right: 22px;
+            font-size: 18px;
+            transition: color 0.3s ease-in-out;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8); /* ظل النص */
+        }
+
+        nav a:hover {
+            color: #DCDEDF;
+        }
+        
     </style>
 </head>
 
 <body>
+    
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#projects-section" onclick="scrollToSection('projects-section')">PROJECTS</a>
+        <a href="#about-section" onclick="scrollToSection('about-section')">ABOUT</a>
+        <a href="#contact-section" onclick="scrollToSection('contact-section')">CONTACT</a>
+    </nav>
+    
     <!-- Header -->
     <header id="Portfolio" style="background-image: url('space.jpg'); background-size: cover; background-position: center; width: 100%; background-repeat: no-repeat; position: relative; text-align: center;">
         <a href="#"><img src="" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
         <div class="w3-container" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
             <h1>Abdelrahman Mostafa</h1>
-            <h3>Leveraging data analysis and visualization for strategic decision-making.</h3>
+            <h4>Leveraging data analysis and visualization for strategic decision-making.</h4>
             <br>
             <div class="w3-section w3-padding-16">
                 <a href="#projects-section" onclick="w3_close()" class="w3-button w3-white">PROJECTS</a>
