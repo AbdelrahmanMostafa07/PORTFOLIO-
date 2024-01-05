@@ -78,11 +78,16 @@
         section img {
             max-width: 100%;
             margin-top: 20px;
-            width: auto; /* تحديد العرض بناءً على النسبة المئوية للعرض الأصلي */
-            height: auto; /* تحديد الارتفاع بناءً على النسبة المئوية للارتفاع الأصلي */
-            display: block;
-            margin: 0 auto;
         }
+
+        /* تحسين حجم الصور على الأجهزة المحمولة */
+        @media only screen and (max-width: 600px) {
+            section img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        
     </style>
 </head>
 <body>
