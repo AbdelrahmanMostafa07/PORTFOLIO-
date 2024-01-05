@@ -218,28 +218,36 @@
         }
 
         nav {
-            background-color: rgba(0, 0, 0, 0.8); /* لون الخلفية */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.8);
             position: fixed;
             width: 100%;
             z-index: 1000;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* ظل الشريط */
-            justify-content: center; /* لوضع العناصر في وسط الشريط */
-            align-items: center; /* لتوسيع العناصر على امتداد الارتفاع */
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
         }
-
+        
         nav a {
-            color: #FFFFFF; /* لون النص */
+            color: #FFFFFF;
             text-decoration: none;
-            margin-right: 22px;
+            margin: 0 22px; /* توسيع المسافة بين الأزرار */
             font-size: 18px;
             transition: color 0.3s ease-in-out;
-            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8); /* ظل النص */
-            transition: color 0.3s ease-in-out; /* تأثير التحويل للون عند التحويل */
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+            border-bottom: 2px solid transparent;
         }
-
+        
         nav a:hover {
-            color: #DCDEDF;
+            color: #FFFFFF;
             border-bottom: none; /* حذف الخط عند التحويل */
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
         }
         
     </style>
