@@ -223,6 +223,8 @@
             width: 100%;
             z-index: 1000;
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* ظل الشريط */
+            justify-content: center; /* لوضع العناصر في وسط الشريط */
+            align-items: center; /* لتوسيع العناصر على امتداد الارتفاع */
         }
 
         nav a {
@@ -256,12 +258,6 @@
         <div class="w3-container" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
             <h1>Abdelrahman Mostafa</h1>
             <h4>Leveraging data analysis and visualization for strategic decision-making.</h4>
-            <br>
-            <div class="w3-section w3-padding-16">
-                <a href="#projects-section" onclick="w3_close()" class="w3-button w3-white">PROJECTS</a>
-                <a href="#about-section" onclick="w3_close()" class="w3-button w3-white">ABOUT</a>
-                <a href="#contact-section" onclick="w3_close()" class="w3-button w3-white">CONTACT</a>
-            </div>
         </div>
     </header>
 
